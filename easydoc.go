@@ -54,8 +54,8 @@ func init() {
 	utils.CheckErr(err)
 
 	// Various paths
-	srcStr = fmt.Sprint(pwd, "./src/")
-	distStr = fmt.Sprint(pwd, "./dist/")
+	srcStr = fmt.Sprint(pwd, "/src/")
+	distStr = fmt.Sprint(pwd, "/dist/")
 	themeStr = fmt.Sprint(srcStr, "theme/")
 }
 
