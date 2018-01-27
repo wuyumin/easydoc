@@ -1,0 +1,3 @@
+package: github.com/wuyumin/EasyDoc
+import:
+- package: github.com/russross/blackfriday
