@@ -1,3 +1,4 @@
 package: github.com/wuyumin/EasyDoc
 import:
 - package: github.com/russross/blackfriday
+- package: github.com/mostafah/fsync

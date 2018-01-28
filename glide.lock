@@ -1,6 +1,8 @@
-hash: 8bfd92dd29cd87105e951ba989671209eab481d789f29bb0c14903eb969d3b1a
-updated: 2018-01-27T22:11:09.4341095+08:00
+hash: ec9babf13bb5fc20d04568d40da486edd5b7158160bd8da4df3ff8037f655a06
+updated: 2018-01-28T16:47:58.7470094+08:00
 imports:
+- name: github.com/mostafah/fsync
+  version: 6c37e2827238edc544397801799b7f7cad4678d6
 - name: github.com/russross/blackfriday
   version: 6d1ef893fcb01b4f50cb6e57ed7df3e2e627b6b2
 testImports: []
