@@ -220,6 +220,9 @@ func GenerateDoc() error {
 	var slice [][]string
 	slice = regexp.MustCompile(`\[(.*)\]\((.*)\)`).FindAllStringSubmatch(string(markdownMenu), -1)
 	for _, v := range slice {
+		if strings.HasPrefix(v[2], "https:") || strings.HasPrefix(v[2], "http:") {
+			continue
+		}
 		markdownDoc, err := ioutil.ReadFile(fmt.Sprint(srcStr, v[2]))
 		if err != nil {
 			return err
