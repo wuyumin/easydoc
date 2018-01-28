@@ -24,16 +24,7 @@ var (
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
 <!-- <link rel="stylesheet" href="static/css/style.css"> -->
-<style>
-.menu{}
-.menu ul{list-style: none;padding-left: 0.5em;}
-.menu a{display: block;padding: 0.2em;border-radius:0.5em;font-size: 1.2em;color: rgba(0,0,0,.87);word-break : break-all;}
-.menu a:hover{background-color: rgba(0,0,0,.05);color: rgba(0,0,0,.95);}
-.menu .made-by{padding: 0.5em;}
-.menu .made-by a{text-align: center;}
-.content{}
-.ui .new-grid{margin-left: 0;margin-right: 0;}
-</style>
+<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/static/css/style.css">
 </head>
 <body>
 
@@ -52,7 +43,7 @@ var (
     <div class="ui vertical">
         <div class="ui inverted menu">
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
-            <a href="javascript:;" class="item">Home</a>
+            <a href="index.html" class="item">Home</a>
             <div class="right menu">
                 <a  href="https://github.com/wuyumin/easydoc" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
             </div>
@@ -74,13 +65,7 @@ var (
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
 <!-- <script src="static/js/app.js"></script> -->
-<script>
-$(function(){
-    $('#btn-sidebar').on('click', function(){
-        $('.ui.sidebar').sidebar('toggle');
-    });
-});
-</script>
+<script src="https://wuyumin.github.io/easydoc/static/js/app.js"></script>
 </body>
 </html>
 `
@@ -94,10 +79,18 @@ You can use markdown to write, EasyDoc will be converted to html content.
 
 	cssDefault = `@charset "utf-8";
 .menu{}
+.menu ul{list-style: none;padding-left: 0.5em;}
+.menu a{display: block;padding: 0.2em;border-radius:0.5em;font-size: 1.2em;color: rgba(0,0,0,.87);word-break : break-all;}
+.menu a:hover{background-color: rgba(0,0,0,.05);color: rgba(0,0,0,.95);}
+.menu .made-by{padding: 0.5em;}
+.menu .made-by a{text-align: center;}
 .content{}
+.ui .new-grid{margin-left: 0;margin-right: 0;}
 `
 	jsDefault = `$(function(){
-    
+    $('#btn-sidebar').on('click', function(){
+        $('.ui.sidebar').sidebar('toggle');
+    });
 });
 `
 )
