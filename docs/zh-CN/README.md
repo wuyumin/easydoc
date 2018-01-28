@@ -39,6 +39,10 @@ Windows系统如 `$ easydoc -version`
 生成的静态文件都放在`dist`目录，直接**复制该目录**到适当地方当作网站目录来使用。  
 注意：再次生成时`dist`目录都会被清空，请不要将重要文件放在里面。
 
-_ _ _
+### 贡献
+
+帮我们改进：[提交 issue 给我们](https://github.com/wuyumin/easydoc/issues) 或者 [提交 pull request 给我们](https://github.com/wuyumin/easydoc/pulls)。
+
+### 命令操作示例动图
 
 ![EasyDoc](https://ww3.sinaimg.cn/large/7d8c848dly1fnw11uce85g20sg0dok9s.gif)
