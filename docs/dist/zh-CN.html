@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>中文文档</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
+<!-- <link rel="stylesheet" href="static/css/style.css"> -->
+<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/static/css/style.css">
+</head>
+<body>
+
+<div class="ui left vertical menu sidebar">
+    <div class="menu">
+        <ul>
+<li><a href="index.html">首页 | Home</a></li>
+<li><a href="zh-CN.html">中文文档</a></li>
+<li><a href="en.html">English Document</a></li>
+</ul>
+
+
+        <div></div>
+        <ul class="made-by">
+            <li><a href="https://github.com/wuyumin/easydoc" target="_blank" title="EasyDoc">EasyDoc</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="pusher">
+    <div class="ui vertical">
+        <div class="ui inverted menu">
+            <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
+            <a href="index.html" class="item">Home</a>
+            <div class="right menu">
+                <a  href="https://github.com/wuyumin/easydoc" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
+            </div>
+        </div>
+
+        <div class="ui grid new-grid">
+            <div class="sixteen wide column">
+                <div class="ui raised segment">
+                    <strong class="ui teal ribbon label">中文文档</strong>
+                    <div class="content">
+                        <h1>EasyDoc 中文文档</h1>
+
+<p>EasyDoc，简单、快速生成文档的工具。</p>
+
+<h3>可执行文件下载</h3>
+
+<p><a href="https://github.com/wuyumin/easydoc/releases">从这下载可执行文件</a></p>
+
+<p>仅一个可执行软件搞定，不用安装，更不用其它依赖，支持微软系统电脑，苹果系统电脑，Linux系统电脑。</p>
+
+<h3>模板目录基本结构</h3>
+
+<pre><code class="language-html">├─dist    //发布目录
+├─src     //存放 .md 源文件及模板文件(必须，支持存放在此目录及其子目录)
+│  ├─static  //静态文件目录，此目录会完整地复制到发布目录
+│  ├─theme
+│  │  ├─template
+│  │  │  ├─doc.tpl  //文档模板文件(非必须，没有则使用软件默认模板)
+│  ├─index.md       //首页(非必须)
+│  ├─SUMMARY.md     //生成菜单使用(必须)
+├─easydoc           //可执行文件。如 Windows 系统下的 easydoc.exe
+</code></pre>
+
+<p><code>建议将 .md 源文件仅放在 src 根目录下</code>，避免忘记模板修改而生成的网页链接路径不对，造成无法访问。</p>
+
+<h3>命令行使用</h3>
+
+<blockquote>
+<p>确保 easydoc 可执行文件有可执行权限！</p>
+</blockquote>
+
+<p>可执行文件在当前目录下时：<br />
+Windows系统 <code>$ easydoc -version</code><br />
+类Unix系统(如Mac，Linux系统。注意前面有 ./ ) <code>$ ./easydoc -version</code><br />
+你可以将 easydoc 可执行文件放在全局环境目录下，直接使用<code>$ easydoc -version</code>进行使用，更加方便。</p>
+
+<h5>EasyDoc 目前支持的命令：</h5>
+
+<p><code>-init</code> 初始文档结构<br />
+<code>-build</code> 生成文档<br />
+<code>-help</code> 帮助文档<br />
+<code>-version</code> 查看 EasyDoc 版本</p>
+
+<p>生成的静态文件都放在<code>dist</code>目录，直接<strong>复制该目录</strong>到适当地方当作网站目录来使用。<br />
+注意：再次生成时<code>dist</code>目录都会被清空，请不要将重要文件放在里面。</p>
+
+<h3>贡献</h3>
+
+<p>帮我们改进：<a href="https://github.com/wuyumin/easydoc/issues">提交 issue 给我们</a> 或者 <a href="https://github.com/wuyumin/easydoc/pulls">提交 pull request 给我们</a>。</p>
+
+<h3>命令操作示例动图</h3>
+
+<p><img src="https://ww3.sinaimg.cn/large/7d8c848dly1fnw11uce85g20sg0dok9s.gif" alt="EasyDoc" /></p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
+<!-- <script src="static/js/app.js"></script> -->
+<script src="https://wuyumin.github.io/easydoc/dist/static/js/app.js"></script>
+</body>
+</html>
