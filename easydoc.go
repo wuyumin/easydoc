@@ -22,6 +22,7 @@ var (
 <meta charset="utf-8">
 <title>{{.dataTitle}}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="static/css/style.css">
 <style>
 </style>
@@ -37,6 +38,10 @@ var (
         {{.dataDoc}}
     </div>
     
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+</script>
 </div>
 </body>
 </html>
