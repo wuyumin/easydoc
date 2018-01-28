@@ -24,8 +24,6 @@ var (
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="static/css/style.css">
-<style>
-</style>
 </head>
 <body>
 <div id="wrap">
@@ -38,10 +36,10 @@ var (
         {{.dataDoc}}
     </div>
     
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script>
-</script>
+<script src="static/js/app.js"></script>
 </div>
 </body>
 </html>
@@ -58,6 +56,9 @@ You can use markdown to write, EasyDoc will be converted to html content.
 #wrap{}
 .menu{}
 .content{}
+`
+	jsDefault = `$(function(){
+});
 `
 )
 
@@ -96,6 +97,16 @@ func GenerateInit() error {
 	}
 	// css file
 	err = ioutil.WriteFile(fmt.Sprint(staticStr, "css/style.css"), []byte(cssDefault), 0777)
+	if err != nil {
+		return err
+	}
+	// js directory
+	err = os.MkdirAll(fmt.Sprint(staticStr, "js/"), 0777)
+	if err != nil {
+		return err
+	}
+	// js file
+	err = ioutil.WriteFile(fmt.Sprint(staticStr, "js/app.js"), []byte(jsDefault), 0777)
 	if err != nil {
 		return err
 	}
