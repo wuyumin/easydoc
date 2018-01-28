@@ -45,3 +45,9 @@ Note: `dist` directory will be emptied when it is generated again, please do not
 ### Contribution
 
 Help us to improve: [submit an issue to us](https://github.com/wuyumin/easydoc/issues) or [pull request to us](https://github.com/wuyumin/easydoc/pulls).
+
+### Who Use EasyDoc
+
+Welcome to provide "Who Use EasyDoc".
+
+- [EasyDoc Document Website](https://wuyumin.github.io/easydoc/dist)
