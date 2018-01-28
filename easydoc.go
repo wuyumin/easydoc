@@ -22,25 +22,65 @@ var (
 <meta charset="utf-8">
 <title>{{.dataTitle}}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="static/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
+<!-- <link rel="stylesheet" href="static/css/style.css"> -->
+<style>
+.menu{}
+.menu ul{list-style: none;padding-left: 0.5em;}
+.menu a{display: block;padding: 0.2em;border-radius:0.5em;font-size: 1.2em;color: rgba(0,0,0,.87);word-break : break-all;}
+.menu a:hover{background-color: rgba(0,0,0,.05);color: rgba(0,0,0,.95);}
+.menu .made-by{padding: 0.5em;}
+.menu .made-by a{text-align: center;}
+.content{}
+.ui .new-grid{margin-left: 0;margin-right: 0;}
+</style>
 </head>
 <body>
-<div id="wrap">
 
+<div class="ui left vertical menu sidebar">
     <div class="menu">
         {{.dataMenu}}
-    </div>
 
-    <div class="content">
-        {{.dataDoc}}
+        <div></div>
+        <ul class="made-by">
+            <li><a href="https://github.com/wuyumin/easydoc" target="_blank" title="EasyDoc">EasyDoc</a></li>
+        </ul>
     </div>
-    
-<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="static/js/app.js"></script>
 </div>
+
+<div class="pusher">
+    <div class="ui vertical">
+        <div class="ui inverted menu">
+            <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
+            <a href="javascript:;" class="item">Home</a>
+            <div class="right menu">
+                <a  href="https://github.com/wuyumin/easydoc" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
+            </div>
+        </div>
+
+        <div class="ui grid new-grid">
+            <div class="sixteen wide column">
+                <div class="ui raised segment">
+                    <strong class="ui teal ribbon label">{{.dataTitle}}</strong>
+                    <div class="content">
+                        {{.dataDoc}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
+<!-- <script src="static/js/app.js"></script> -->
+<script>
+$(function(){
+    $('#btn-sidebar').on('click', function(){
+        $('.ui.sidebar').sidebar('toggle');
+    });
+});
+</script>
 </body>
 </html>
 `
@@ -53,11 +93,11 @@ You can use markdown to write, EasyDoc will be converted to html content.
 `
 
 	cssDefault = `@charset "utf-8";
-#wrap{}
 .menu{}
 .content{}
 `
 	jsDefault = `$(function(){
+    
 });
 `
 )
