@@ -2,8 +2,8 @@
 
 ### Documentation
 
-- [中文文档](docs/zh-CN/README.md)
-- [English Document](docs/en/README.md)
+- [中文文档](https://wuyumin.github.io/easydoc/dist/zh-CN.html)
+- [English Document](https://wuyumin.github.io/easydoc/dist/en.html)
 
 ### What is EasyDoc?
 
@@ -28,6 +28,7 @@ Only one binary file, do not install, not to rely on others, support to Microsof
 │ ├─SUMMARY.md  //use to generate menu(required)
 ├─easydoc       //binary file. Such as easydoc.exe on Windows system
 ```
+It is recommended that `.md source file only in src directory` to avoid forgetting to modify the template, web link is error.
 
 ### Command Line to Use
 

@@ -21,6 +21,7 @@ Only one binary file, do not install, not to rely on others, support to Microsof
 │ ├─SUMMARY.md  //use to generate menu(required)
 ├─easydoc       //binary file. Such as easydoc.exe on Windows system
 ```
+It is recommended that `.md source file only in src directory` to avoid forgetting to modify the template, web link is error.
 
 ### Command Line to Use
 
