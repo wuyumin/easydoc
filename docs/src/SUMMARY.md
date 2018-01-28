@@ -1,3 +1,4 @@
-- [首页 | Home](index.md)
+- [首页 - Home](index.md)
+- [下载 - Download](https://github.com/wuyumin/easydoc/releases)
 - [中文文档](zh-CN.md)
 - [English Document](en.md)
