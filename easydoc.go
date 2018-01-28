@@ -3,6 +3,7 @@ package easydoc
 import (
 	"github.com/wuyumin/easydoc/utils"
 	"github.com/russross/blackfriday"
+	"github.com/mostafah/fsync"
 	"io/ioutil"
 	"text/template"
 	"bytes"
@@ -89,6 +90,11 @@ func GenerateInit() error {
 	if err != nil {
 		return err
 	}
+	// static directory
+	err = os.MkdirAll(fmt.Sprint(srcStr, "static/"), 0777)
+	if err != nil {
+		return err
+	}
 
 	// "dist" directory
 	err = os.MkdirAll(distStr, 0777)
@@ -111,24 +117,30 @@ func GenerateDoc() error {
 	err = os.MkdirAll(distStr, 0777)
 	utils.CheckErr(err)
 
+	// copy static directory
+	err = os.MkdirAll(fmt.Sprint(distStr, "static/"), 0777)
+	utils.CheckErr(err)
+	err = fsync.Sync(fmt.Sprint(distStr, "static/"), fmt.Sprint(srcStr, "static/"))
+	utils.CheckErr(err)
+
 	// Menu content
 	markdownMenu, err := ioutil.ReadFile(fmt.Sprint(srcStr, "SUMMARY.md"))
 	if err != nil {
 		return err
 	}
-	markdownMenuHtml := strings.Replace(string(blackfriday.MarkdownCommon(markdownMenu)), ".md", ".html", -1)  // Menu html content
+	markdownMenuHtml := strings.Replace(string(blackfriday.MarkdownCommon(markdownMenu)), ".md", ".html", -1) // Menu html content
 
 	// Template content
 	var templateFile, templateContent string
 	templateFile = fmt.Sprint(themeStr, "template/doc.tpl")
 	if _, err := os.Stat(templateFile); err != nil {
-		templateContent = templateDefaultDoc  //Default template content
+		templateContent = templateDefaultDoc //Default template content
 	} else {
 		templateNewDoc, err := ioutil.ReadFile(templateFile)
 		if err != nil {
 			return err
 		}
-		templateContent = string(templateNewDoc)  //File template content
+		templateContent = string(templateNewDoc) //File template content
 	}
 
 	template_doc := template.New("Doc")
@@ -145,7 +157,7 @@ func GenerateDoc() error {
 		if err != nil {
 			return err
 		}
-		markdownDocHtml := string(blackfriday.MarkdownCommon(markdownDoc))  // Document html content
+		markdownDocHtml := string(blackfriday.MarkdownCommon(markdownDoc)) // Document html content
 		var buf bytes.Buffer
 		template_doc.Execute(&buf, map[string]interface{}{"dataTitle": v[1], "dataMenu": markdownMenuHtml, "dataDoc": markdownDocHtml})
 		if _, err := os.Stat(fmt.Sprint(distStr, path.Dir(v[2]))); err != nil {
