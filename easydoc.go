@@ -24,7 +24,7 @@ var (
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
 <!-- <link rel="stylesheet" href="static/css/style.css"> -->
-<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/static/css/style.css">
+<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/static/css/style.css">
 </head>
 <body>
 
@@ -65,7 +65,7 @@ var (
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
 <!-- <script src="static/js/app.js"></script> -->
-<script src="https://wuyumin.github.io/easydoc/static/js/app.js"></script>
+<script src="https://wuyumin.github.io/easydoc/dist/static/js/app.js"></script>
 </body>
 </html>
 `
