@@ -49,6 +49,9 @@ You can use markdown to write, EasyDoc will be converted to html content.
 `
 
 	cssDefault = `@charset "utf-8";
+#wrap{}
+.menu{}
+.content{}
 `
 )
 
