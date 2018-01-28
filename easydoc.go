@@ -15,8 +15,8 @@ import (
 )
 
 var (
-	srcStr, distStr, themeStr string
-	templateDefaultDoc        = `<!doctype html>
+	srcStr, distStr, themeStr, staticStr string
+	templateDefaultDoc                   = `<!doctype html>
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
@@ -47,6 +47,9 @@ var (
 This is content.  
 You can use markdown to write, EasyDoc will be converted to html content.
 `
+
+	cssDefault = `@charset "utf-8";
+`
 )
 
 func init() {
@@ -58,6 +61,7 @@ func init() {
 	srcStr = fmt.Sprint(pwd, "/src/")
 	distStr = fmt.Sprint(pwd, "/dist/")
 	themeStr = fmt.Sprint(srcStr, "theme/")
+	staticStr = fmt.Sprint(srcStr, "static/")
 }
 
 func GenerateInit() error {
@@ -73,6 +77,16 @@ func GenerateInit() error {
 	}
 	// index file
 	err = ioutil.WriteFile(fmt.Sprint(srcStr, "index.md"), []byte(markdownIndex), 0777)
+	if err != nil {
+		return err
+	}
+	// css directory
+	err = os.MkdirAll(fmt.Sprint(staticStr, "css/"), 0777)
+	if err != nil {
+		return err
+	}
+	// css file
+	err = ioutil.WriteFile(fmt.Sprint(staticStr, "css/style.css"), []byte(cssDefault), 0777)
 	if err != nil {
 		return err
 	}
