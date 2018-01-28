@@ -17,7 +17,7 @@ EasyDoc，简单、快速生成文档的工具。
 │  │  ├─template
 │  │  │  ├─doc.tpl  //文档模板文件(非必须，没有则使用系统默认模板)
 │  ├─index.md       //首页(非必须)
-│  ├─README.md      //生成菜单使用(必须)
+│  ├─SUMMARY.md      //生成菜单使用(必须)
 ├─easydoc  //可执行文件。如 Windows 系统下的 easydoc.exe
 ```
 

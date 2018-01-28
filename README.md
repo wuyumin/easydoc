@@ -24,7 +24,7 @@ Only one binary file, do not install, not to rely on others, support to Microsof
 │ │ ├─template
 │ │ │ ├─doc.tpl //document template file (not required, if not, use the system default template)
 │ ├─index.md //Home(not required)
-│ ├─README.md //use to generate menu(required)
+│ ├─SUMMARY.md //use to generate menu(required)
 ├─easydoc //binary file. Such as easydoc.exe on Windows system
 ```
 

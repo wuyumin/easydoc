@@ -39,7 +39,7 @@ var (
 </body>
 </html>
 `
-	markdownReadme = `- [Home](index.md)
+	markdownSummary = `- [Home](index.md)
 `
 	markdownIndex = `# Home
 
@@ -66,7 +66,7 @@ func GenerateInit() error {
 		return err
 	}
 	// menu file
-	err = ioutil.WriteFile(fmt.Sprint(srcStr, "README.md"), []byte(markdownReadme), 0777)
+	err = ioutil.WriteFile(fmt.Sprint(srcStr, "SUMMARY.md"), []byte(markdownSummary), 0777)
 	if err != nil {
 		return err
 	}
@@ -112,7 +112,7 @@ func GenerateDoc() error {
 	utils.CheckErr(err)
 
 	// Menu content
-	markdownMenu, err := ioutil.ReadFile(fmt.Sprint(srcStr, "README.md"))
+	markdownMenu, err := ioutil.ReadFile(fmt.Sprint(srcStr, "SUMMARY.md"))
 	if err != nil {
 		return err
 	}
