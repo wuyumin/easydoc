@@ -41,4 +41,4 @@ Windows系统如 `$ easydoc -version`
 
 _ _ _
 
-![EasyDoc](https://sfault-image.b0.upaiyun.com/234/289/2342891614-5a6ce27d98153_articlex)
+![EasyDoc](https://ww3.sinaimg.cn/large/7d8c848dly1fnw11uce85g20sg0dok9s.gif)
