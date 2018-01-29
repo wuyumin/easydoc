@@ -41,7 +41,7 @@ var (
 
 <div class="pusher">
     <div class="ui vertical">
-        <div class="ui inverted menu">
+        <div class="ui inverted borderless menu">
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
             <a href="index.html" class="item">Home</a>
             <div class="right menu">
