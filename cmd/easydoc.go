@@ -25,7 +25,7 @@ func init() {
 	initPtr = flag.Bool("init", false, "Init the document structure")
 	buildPtr = flag.Bool("build", false, "Build the document")
 	emptyDistPtr = flag.Bool("emptydist", false, "Empty dist directory")
-	ServerPtr = flag.Bool("server", false, "Start the server")
+	ServerPtr = flag.Bool("server", false, "Start web server")
 	portPtr = flag.String("port", "", "Web port")
 	pathPtr = flag.String("path", "", "Web path")
 	flag.Parse()
@@ -57,7 +57,7 @@ func main() {
 		utils.CheckErr(err)
 	case *emptyDistPtr:
 		var submit string
-		fmt.Print("Be sure to empty dist directory?(y or n. Press Ctrl + C to exit.):")
+		fmt.Print("Be sure to empty dist directory?(y or n Press Ctrl + C to ):")
 		fmt.Scan(&submit)
 		if submit == "Y" || submit == "y" {
 			err = easydoc.EmptyDist()
