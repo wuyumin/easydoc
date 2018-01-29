@@ -62,8 +62,11 @@ var (
     </div>
 </div>
 
+<p id="back2top">&and;</p>
+
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 <!-- <script src="static/js/app.js"></script> -->
 <script src="https://wuyumin.github.io/easydoc/dist/static/js/app.js"></script>
 </body>
@@ -94,11 +97,30 @@ code{padding: 2px 4px;font-size: 90%;color: #c7254e;background-color: #f9f2f4;bo
 pre{padding: 2px 5px;background-color: #f2f2f2;border-radius: 3px;max-width: 100%;overflow-x: scroll;}
 pre code{padding: 0;font-size: 90%;color: #333;background-color: #f2f2f2;border-radius: 0;}
 blockquote{margin: 5px 0;padding: 5px 10px;border-left: 2px solid #00b5ad;background-color: #f6f6f6;color: #555;font-size: 1em;}
+
+/* back2top */
+#back2top{position: fixed;bottom: 5px;right: 5px;display: none;width: 30px;height: 30px;border-radius: 30px;line-height: 30px;text-align: center;background: #222;color: #fff;font-weight: bold;cursor: pointer;-webkit-transition: 1s;-moz-transition: 1s;-ms-transition: 1s;-o-transition: 1s;transition: 1s;}
+#back2top:hover{background: #555;}
 `
 	jsDefault = `$(function(){
+    /* btn-sidebar */
     $('#btn-sidebar').on('click', function(){
         $('.ui.sidebar').sidebar('toggle');
     });
+
+    /* back2top */
+    $(window).on('scroll', $.throttle(250, function(){
+        if($(this).scrollTop() >= 100){
+            $('#back2top').fadeIn();
+        } else {
+            $('#back2top').fadeOut();
+        }
+    }));
+    $('#back2top').on('click', $.throttle(250, true, function(){
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+    }));
 });
 `
 )
