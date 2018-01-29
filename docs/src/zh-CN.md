@@ -2,6 +2,8 @@
 
 EasyDoc，简单、快速生成文档的工具。
 
+EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)
+
 ### 可执行文件下载
 
 [从这下载可执行文件](https://github.com/wuyumin/easydoc/releases) (压缩包需要解压出可执行文件。)

@@ -9,6 +9,8 @@
 
 EasyDoc, `Easy` to generate `Documents`.
 
+EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)
+
 ### Binary File for Download
 
 [link to download binary file](https://github.com/wuyumin/easydoc/releases) (Compressed package need to extract the binary file.)
