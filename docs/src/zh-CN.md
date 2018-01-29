@@ -1,5 +1,7 @@
 # EasyDoc 中文文档
 
+<iframe src="https://ghbtns.com/github-btn.html?user=wuyumin&repo=easydoc&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
 EasyDoc，简单、快速生成文档的工具。
 
 EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)

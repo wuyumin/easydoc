@@ -1,5 +1,7 @@
 # EasyDoc English Document
 
+<iframe src="https://ghbtns.com/github-btn.html?user=wuyumin&repo=easydoc&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
 EasyDoc, `Easy` to generate `Documents`.
 
 EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)
