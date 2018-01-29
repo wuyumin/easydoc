@@ -15,6 +15,8 @@ EasyDoc, `Easy` to generate `Documents`.
 
 Only one binary file, do not install, not to rely on others, support to Microsoft system computer, Apple system computer, Linux system computer.
 
+EasyDoc is developed by Go language, open source software, you can use the source code to compile. In fact, you do not have to do that, we have compiled and optimized binary file for download.
+
 ### Source Directory Basic Structure
 
 Use `-init` command automatically generate
