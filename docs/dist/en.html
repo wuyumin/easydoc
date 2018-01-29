@@ -29,7 +29,7 @@
 
 <div class="pusher">
     <div class="ui vertical">
-        <div class="ui inverted menu">
+        <div class="ui inverted borderless menu">
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
             <a href="index.html" class="item">Home</a>
             <div class="right menu">
@@ -44,15 +44,23 @@
                     <div class="content">
                         <h1>EasyDoc English Document</h1>
 
+<iframe src="https://ghbtns.com/github-btn.html?user=wuyumin&repo=easydoc&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
 <p>EasyDoc, <code>Easy</code> to generate <code>Documents</code>.</p>
+
+<p>EasyDoc pronunciation [ˈiziˈdɑk] <a href="https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3">sound file</a></p>
 
 <h3>Binary File for Download</h3>
 
-<p><a href="https://github.com/wuyumin/easydoc/releases">link to download binary file</a></p>
+<p><a href="https://github.com/wuyumin/easydoc/releases">link to download binary file</a> (Compressed package need to extract the binary file.)</p>
 
 <p>Only one binary file, do not install, not to rely on others, support to Microsoft system computer, Apple system computer, Linux system computer.</p>
 
-<h3>Basic Template Directory Structure</h3>
+<p>EasyDoc is developed by Go language, open source software, you can use the source code to compile. In fact, you do not have to do that, we have compiled and optimized binary file for download.</p>
+
+<h3>Source Directory Basic Structure</h3>
+
+<p>Use <code>-init</code> command automatically generate</p>
 
 <pre><code class="language-html">├─dist  //release directory
 ├─src   //store .md source files and template files(required, support to store in this directory and its subdirectories)
@@ -60,7 +68,7 @@
 │ ├─theme
 │ │ ├─template
 │ │ │ ├─doc.tpl //document template file (not required, if not, use the software default template)
-│ ├─index.md    //Home(not required)
+│ ├─index.md    //Home(not required, but recommended)
 │ ├─SUMMARY.md  //use to generate menu(required)
 ├─easydoc       //binary file. Such as easydoc.exe on Windows system
 </code></pre>
@@ -107,8 +115,11 @@ Note: <code>dist</code> directory will be emptied when it is generated again, pl
     </div>
 </div>
 
+<p id="back2top">&and;</p>
+
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 <!-- <script src="static/js/app.js"></script> -->
 <script src="https://wuyumin.github.io/easydoc/dist/static/js/app.js"></script>
 </body>
