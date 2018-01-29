@@ -9,13 +9,14 @@ import (
 )
 
 var (
-	versionPtr *bool
-	helpPtr    *bool
-	initPtr    *bool
-	buildPtr   *bool
-	ServerPtr  *bool
-	portPtr    *string
-	pathPtr    *string
+	versionPtr   *bool
+	helpPtr      *bool
+	initPtr      *bool
+	buildPtr     *bool
+	emptyDistPtr *bool
+	ServerPtr    *bool
+	portPtr      *string
+	pathPtr      *string
 )
 
 func init() {
@@ -23,6 +24,7 @@ func init() {
 	helpPtr = flag.Bool("help", false, "Help about EasyDoc")
 	initPtr = flag.Bool("init", false, "Init the document structure")
 	buildPtr = flag.Bool("build", false, "Build the document")
+	emptyDistPtr = flag.Bool("emptydist", false, "Empty dist directory")
 	ServerPtr = flag.Bool("server", false, "Start the server")
 	portPtr = flag.String("port", "", "Web port")
 	pathPtr = flag.String("path", "", "Web path")
@@ -51,8 +53,19 @@ func main() {
 		utils.CheckErr(err)
 		fmt.Println("Initialization is OK.")
 	case *buildPtr:
-		err = easydoc.GenerateDoc()
+		err = easydoc.GenerateDoc(false)
 		utils.CheckErr(err)
+	case *emptyDistPtr:
+		var submit string
+		fmt.Print("Be sure to empty dist directory?(y or n. Press Ctrl + C to exit.):")
+		fmt.Scan(&submit)
+		if submit == "Y" || submit == "y" {
+			err = easydoc.EmptyDist()
+			utils.CheckErr(err)
+			fmt.Println("Empty dist is OK.")
+		} else {
+			fmt.Println("No empty dist.")
+		}
 	case *ServerPtr:
 		err = easydoc.StartServer(*portPtr, *pathPtr)
 		utils.CheckErr(err)

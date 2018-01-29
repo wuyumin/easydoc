@@ -204,16 +204,19 @@ func GenerateInit() error {
 	return nil
 }
 
-func GenerateDoc() error {
+func GenerateDoc(isEmptydist bool) error {
 	// "src" directory is exist?
 	if _, err := os.Stat(srcStr); err != nil {
 		return err
 	}
 
-	// Empty the generated file
-	err := os.RemoveAll(distStr)
-	utils.CheckErr(err)
-	err = os.MkdirAll(distStr, 0777)
+	// Empty dist directory
+	if isEmptydist {
+		err := EmptyDist()
+		utils.CheckErr(err)
+	}
+	// Make dist directory
+	err := os.MkdirAll(distStr, 0777)
 	utils.CheckErr(err)
 
 	// copy static directory
@@ -292,7 +295,7 @@ func StartServer(port string, path string) error {
 	output = fmt.Sprint(output, "Your path on: ", absPath, "\n")
 
 	output = fmt.Sprint(output, "URL is: ", "*", port, "  For example  localhost", port, "\n")
-	output = fmt.Sprint(output, "\nExit: Ctrl + C", "\n")
+	output = fmt.Sprint(output, "\nPress Ctrl + C to exit.", "\n")
 
 	srv := &http.Server{
 		Addr:    port,
@@ -303,4 +306,12 @@ func StartServer(port string, path string) error {
 	// Print info before ListenAndServe()
 	status := srv.ListenAndServe()
 	return status
+}
+
+func EmptyDist() error {
+	if _, err := os.Stat(distStr); err != nil {
+		return err
+	}
+	err := os.RemoveAll(distStr)
+	return err
 }
