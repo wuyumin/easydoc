@@ -13,6 +13,7 @@ import (
 	"strings"
 	"path"
 	"net/http"
+	"path/filepath"
 )
 
 var (
@@ -276,18 +277,30 @@ func GenerateDoc() error {
 }
 
 func StartServer(port string, path string) error {
+	output := ""
+
 	if port == "" {
 		port = "80"
 	}
+	output = fmt.Sprint(output, "Your port on: ", port, "\n")
 	port = fmt.Sprint(":", port)
 
 	if path == "" {
 		path = distStr
 	}
+	absPath, _ := filepath.Abs(path)
+	output = fmt.Sprint(output, "Your path on: ", absPath, "\n")
+
+	output = fmt.Sprint(output, "URL is: ", "*", port, "  For example  localhost", port, "\n")
+	output = fmt.Sprint(output, "\nExit: Ctrl + C", "\n")
 
 	srv := &http.Server{
 		Addr:    port,
 		Handler: http.FileServer(http.Dir(path)),
 	}
-	return srv.ListenAndServe()
+	fmt.Println(output)
+	// fmt.Println("Start server is OK.")
+	// Print info before ListenAndServe()
+	status := srv.ListenAndServe()
+	return status
 }
