@@ -8,7 +8,9 @@ EasyDoc, `Easy` to generate `Documents`.
 
 Only one binary file, do not install, not to rely on others, support to Microsoft system computer, Apple system computer, Linux system computer.
 
-### Basic Template Directory Structure
+### Source Directory Basic Structure
+
+Use `-init` command automatically generate
 
 ```html
 ├─dist  //release directory
