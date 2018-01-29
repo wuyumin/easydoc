@@ -4,7 +4,7 @@ EasyDoc, `Easy` to generate `Documents`.
 
 ### Binary File for Download
 
-[link to download binary file](https://github.com/wuyumin/easydoc/releases)
+[link to download binary file](https://github.com/wuyumin/easydoc/releases) (Compressed package need to extract the binary file.)
 
 Only one binary file, do not install, not to rely on others, support to Microsoft system computer, Apple system computer, Linux system computer.
 

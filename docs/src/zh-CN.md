@@ -4,7 +4,7 @@ EasyDoc，简单、快速生成文档的工具。
 
 ### 可执行文件下载
 
-[从这下载可执行文件](https://github.com/wuyumin/easydoc/releases)
+[从这下载可执行文件](https://github.com/wuyumin/easydoc/releases) (压缩包需要解压出可执行文件。)
 
 仅一个可执行软件搞定，不用安装，更不用其它依赖，支持微软系统电脑，苹果系统电脑，Linux系统电脑。
 
