@@ -23,7 +23,7 @@
 
 <div class="pusher">
     <div class="ui vertical">
-        <div class="ui inverted menu">
+        <div class="ui inverted borderless menu">
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
             <a href="index.html" class="item">Home</a>
             <div class="right menu">
@@ -44,8 +44,11 @@
     </div>
 </div>
 
+<p id="back2top">&and;</p>
+
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
+<script src="https://cdn.bootcss.com/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 <!-- <script src="static/js/app.js"></script> -->
 <script src="https://wuyumin.github.io/easydoc/dist/static/js/app.js"></script>
 </body>
