@@ -25,7 +25,7 @@ EasyDoc 使用 Go 语言开发，是开源软件，你可以自行使用源码�
 │  ├─theme
 │  │  ├─template
 │  │  │  ├─doc.tpl  //文档模板文件(非必须，没有则使用软件默认模板)
-│  ├─index.md       //首页(非必须)
+│  ├─index.md       //首页(非必须，但推荐)
 │  ├─SUMMARY.md     //生成菜单使用(必须)
 ├─easydoc           //可执行文件。如 Windows 系统下的 easydoc.exe
 ```

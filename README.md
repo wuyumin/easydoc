@@ -32,7 +32,7 @@ Use `-init` command automatically generate
 │ ├─theme
 │ │ ├─template
 │ │ │ ├─doc.tpl //document template file (not required, if not, use the software default template)
-│ ├─index.md    //Home(not required)
+│ ├─index.md    //Home(not required, but recommended)
 │ ├─SUMMARY.md  //use to generate menu(required)
 ├─easydoc       //binary file. Such as easydoc.exe on Windows system
 ```
