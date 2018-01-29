@@ -49,6 +49,8 @@ You can put easydoc binary file in the global environment directory, directly us
 
 `-init` Init the document structure  
 `-build` Build the document  
+`-server` Start web server(used[or not] with the port `-port` and the path` -path`, the default port is 80, the default path is dist directory)  
+`-emptydist` Empty dist directory  
 `-help` Help about EasyDoc  
 `-version` Print the version number of EasyDoc  
 

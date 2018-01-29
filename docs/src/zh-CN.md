@@ -41,8 +41,11 @@ Windows系统 `$ easydoc -version`
 你可以将 easydoc 可执行文件放在全局环境目录下，直接使用`$ easydoc -version`进行使用，更加方便。  
 
 ##### EasyDoc 目前支持的命令：  
-`-init` 初始文档结构  
+
+`-init` 初始化文档结构  
 `-build` 生成文档  
+`-server` 启动 web 服务(可以配合[或者不配合]端口`-port`和路径`-path`一起使用,默认端口是80，默认路径是 dist 目录)  
+`-emptydist` 清空 dist 目录  
 `-help` 帮助文档  
 `-version` 查看 EasyDoc 版本  
 

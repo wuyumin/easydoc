@@ -1,1 +1,1 @@
-https://wuyumin.github.io/easydoc/dist/index.html
+<https://wuyumin.github.io/easydoc/dist/index.html>
