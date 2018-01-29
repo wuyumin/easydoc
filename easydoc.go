@@ -12,6 +12,7 @@ import (
 	"regexp"
 	"strings"
 	"path"
+	"net/http"
 )
 
 var (
@@ -272,4 +273,21 @@ func GenerateDoc() error {
 	}
 
 	return nil
+}
+
+func StartServer(port string, path string) error {
+	if port == "" {
+		port = "80"
+	}
+	port = fmt.Sprint(":", port)
+
+	if path == "" {
+		path = distStr
+	}
+
+	srv := &http.Server{
+		Addr:    port,
+		Handler: http.FileServer(http.Dir(path)),
+	}
+	return srv.ListenAndServe()
 }

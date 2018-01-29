@@ -13,6 +13,9 @@ var (
 	helpPtr    *bool
 	initPtr    *bool
 	buildPtr   *bool
+	ServerPtr  *bool
+	portPtr    *string
+	pathPtr    *string
 )
 
 func init() {
@@ -20,6 +23,9 @@ func init() {
 	helpPtr = flag.Bool("help", false, "Help about EasyDoc")
 	initPtr = flag.Bool("init", false, "Init the document structure")
 	buildPtr = flag.Bool("build", false, "Build the document")
+	ServerPtr = flag.Bool("server", false, "Start the server")
+	portPtr = flag.String("port", "", "Web port")
+	pathPtr = flag.String("path", "", "Web path")
 	flag.Parse()
 }
 
@@ -46,6 +52,9 @@ func main() {
 		fmt.Println("Initialization is OK.")
 	case *buildPtr:
 		err = easydoc.GenerateDoc()
+		utils.CheckErr(err)
+	case *ServerPtr:
+		err = easydoc.StartServer(*portPtr, *pathPtr)
 		utils.CheckErr(err)
 	default:
 		flag.PrintDefaults()
