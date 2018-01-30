@@ -58,7 +58,7 @@ Windows系统 `$ easydoc -version`
 
 ### 命令操作示例动图
 
-![EasyDoc](https://wx3.sinaimg.cn/large/7d8c848dly1fnxttxaxtjg20ms0e21kx.gif)
+![EasyDoc](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.gif)
 
 ### 谁使用 EasyDoc
 
