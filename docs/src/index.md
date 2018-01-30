@@ -9,9 +9,11 @@
 中文文档
 
 - [EasyDoc 的使用](zh-CN.html)
+- [关于 EasyDoc](zh-CN-info.html)
 - [EasyDoc 的更新日志](zh-CN-log.html)
 
 English Documents
 
 - [EasyDoc Use](en.html)
+- [About EasyDoc](en-info.html)
 - [EasyDoc Update Log](en-log.html)
