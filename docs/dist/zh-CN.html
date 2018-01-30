@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>中文文档</title>
+<title>EasyDoc 的使用</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
 <!-- <link rel="stylesheet" href="static/css/style.css"> -->
@@ -12,11 +12,28 @@
 
 <div class="ui left vertical menu sidebar">
     <div class="menu">
-        <ul>
+        <!--
+1、菜单生成。
+2、菜单生成文件里所有采用Markdown语法的无序列表简单形式的链接都会被EasyDoc工具扫描、过滤、生成。
+-->
+
+<ul>
 <li><a href="index.html">首页 - Home</a></li>
 <li><a href="https://github.com/wuyumin/easydoc/releases">下载 - Download</a></li>
-<li><a href="zh-CN.html">中文文档</a></li>
-<li><a href="en.html">English Document</a></li>
+</ul>
+
+<p>中文文档</p>
+
+<ul>
+<li><a href="zh-CN.html">EasyDoc 的使用</a></li>
+<li><a href="zh-CN-log.html">EasyDoc 的更新日志</a></li>
+</ul>
+
+<p>English Documents</p>
+
+<ul>
+<li><a href="en.html">EasyDoc Use</a></li>
+<li><a href="en-log.html">EasyDoc Update Log</a></li>
 </ul>
 
 
@@ -40,7 +57,7 @@
         <div class="ui grid new-grid">
             <div class="sixteen wide column">
                 <div class="ui raised segment">
-                    <strong class="ui teal ribbon label">中文文档</strong>
+                    <strong class="ui teal ribbon label">EasyDoc 的使用</strong>
                     <div class="content">
                         <h1>EasyDoc 中文文档</h1>
 
@@ -58,6 +75,28 @@
 
 <p>EasyDoc 使用 Go 语言开发，是开源软件，你可以自行使用源码进行编译。其实你可不必这么做，我们已经有编译并优化好的可执行文件来下载。</p>
 
+<h3>命令行的使用</h3>
+
+<blockquote>
+<p>确保 easydoc 可执行文件有可执行权限！</p>
+</blockquote>
+
+<p>可执行文件在当前目录下时：<br />
+Windows系统 <code>$ easydoc -version</code><br />
+类Unix系统(如Mac，Linux系统。注意前面有 ./ ) <code>$ ./easydoc -version</code><br />
+你可以将 easydoc 可执行文件放在全局环境目录下(推荐此做法)，直接使用<code>$ easydoc -version</code>进行使用。</p>
+
+<h5>EasyDoc 目前支持的命令：</h5>
+
+<p><code>-init</code> 初始化文档结构<br />
+<code>-build</code> 生成文档<br />
+<code>-server</code> 启动 web 服务(可以配合[或不配合]端口<code>-port</code>和路径<code>-path</code>一起使用，默认端口是 80 ，默认路径是 dist 目录)<br />
+<code>-emptydist</code> 清空 dist 目录<br />
+<code>-help</code> 帮助文档<br />
+<code>-version</code> 查看 EasyDoc 版本</p>
+
+<p>生成的静态文件都放在<code>dist</code>目录，直接<strong>复制该目录</strong>到适当地方当作网站目录来使用。</p>
+
 <h3>源目录基本结构</h3>
 
 <p>使用 <code>-init</code> 命令自动生成</p>
@@ -70,32 +109,13 @@
 │  │  │  ├─doc.tpl  //文档模板文件(非必须，没有则使用软件默认模板)
 │  ├─index.md       //首页(非必须，但推荐)
 │  ├─SUMMARY.md     //生成菜单使用(必须)
-├─easydoc           //可执行文件。如 Windows 系统下的 easydoc.exe
+├─easydoc.exe           //可执行文件
 </code></pre>
 
-<p><code>建议将 .md 源文件仅放在 src 根目录下</code>，避免忘记模板修改而生成的网页链接路径不对，造成无法访问。</p>
-
-<h3>命令行使用</h3>
-
-<blockquote>
-<p>确保 easydoc 可执行文件有可执行权限！</p>
-</blockquote>
-
-<p>可执行文件在当前目录下时：<br />
-Windows系统 <code>$ easydoc -version</code><br />
-类Unix系统(如Mac，Linux系统。注意前面有 ./ ) <code>$ ./easydoc -version</code><br />
-你可以将 easydoc 可执行文件放在全局环境目录下，直接使用<code>$ easydoc -version</code>进行使用，更加方便。</p>
-
-<h5>EasyDoc 目前支持的命令：</h5>
-
-<p><code>-init</code> 初始化文档结构<br />
-<code>-build</code> 生成文档<br />
-<code>-server</code> 启动 web 服务(可以配合[或者不配合]端口<code>-port</code>和路径<code>-path</code>一起使用,默认端口是80，默认路径是 dist 目录)<br />
-<code>-emptydist</code> 清空 dist 目录<br />
-<code>-help</code> 帮助文档<br />
-<code>-version</code> 查看 EasyDoc 版本</p>
-
-<p>生成的静态文件都放在<code>dist</code>目录，直接<strong>复制该目录</strong>到适当地方当作网站目录来使用。</p>
+<ul>
+<li><code>建议将 .md 源文件仅放在 src 根目录下</code>，避免忘记模板修改而生成的网页链接路径不对，造成无法访问。</li>
+<li>源文件使用 Markdown 语法编写。</li>
+</ul>
 
 <h3>贡献</h3>
 

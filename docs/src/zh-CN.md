@@ -14,6 +14,26 @@ EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://wuyumin.github.io/easydoc/di
 
 EasyDoc 使用 Go 语言开发，是开源软件，你可以自行使用源码进行编译。其实你可不必这么做，我们已经有编译并优化好的可执行文件来下载。
 
+### 命令行的使用
+
+> 确保 easydoc 可执行文件有可执行权限！
+
+可执行文件在当前目录下时：  
+Windows系统 `$ easydoc -version`  
+类Unix系统(如Mac，Linux系统。注意前面有 ./ ) `$ ./easydoc -version`  
+你可以将 easydoc 可执行文件放在全局环境目录下(推荐此做法)，直接使用`$ easydoc -version`进行使用。  
+
+##### EasyDoc 目前支持的命令：  
+
+`-init` 初始化文档结构  
+`-build` 生成文档  
+`-server` 启动 web 服务(可以配合[或不配合]端口`-port`和路径`-path`一起使用，默认端口是 80 ，默认路径是 dist 目录)  
+`-emptydist` 清空 dist 目录  
+`-help` 帮助文档  
+`-version` 查看 EasyDoc 版本  
+
+生成的静态文件都放在`dist`目录，直接**复制该目录**到适当地方当作网站目录来使用。
+
 ### 源目录基本结构
 
 使用 `-init` 命令自动生成
@@ -27,29 +47,10 @@ EasyDoc 使用 Go 语言开发，是开源软件，你可以自行使用源码�
 │  │  │  ├─doc.tpl  //文档模板文件(非必须，没有则使用软件默认模板)
 │  ├─index.md       //首页(非必须，但推荐)
 │  ├─SUMMARY.md     //生成菜单使用(必须)
-├─easydoc           //可执行文件。如 Windows 系统下的 easydoc.exe
+├─easydoc.exe           //可执行文件
 ```
-`建议将 .md 源文件仅放在 src 根目录下`，避免忘记模板修改而生成的网页链接路径不对，造成无法访问。
-
-### 命令行使用
-
-> 确保 easydoc 可执行文件有可执行权限！
-
-可执行文件在当前目录下时：  
-Windows系统 `$ easydoc -version`  
-类Unix系统(如Mac，Linux系统。注意前面有 ./ ) `$ ./easydoc -version`  
-你可以将 easydoc 可执行文件放在全局环境目录下，直接使用`$ easydoc -version`进行使用，更加方便。  
-
-##### EasyDoc 目前支持的命令：  
-
-`-init` 初始化文档结构  
-`-build` 生成文档  
-`-server` 启动 web 服务(可以配合[或者不配合]端口`-port`和路径`-path`一起使用,默认端口是80，默认路径是 dist 目录)  
-`-emptydist` 清空 dist 目录  
-`-help` 帮助文档  
-`-version` 查看 EasyDoc 版本  
-
-生成的静态文件都放在`dist`目录，直接**复制该目录**到适当地方当作网站目录来使用。
+- `建议将 .md 源文件仅放在 src 根目录下`，避免忘记模板修改而生成的网页链接路径不对，造成无法访问。
+- 源文件使用 Markdown 语法编写。
 
 ### 贡献
 
