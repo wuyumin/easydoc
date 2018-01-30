@@ -6,6 +6,11 @@ EasyDoc，简单、快速生成文档的工具。
 
 EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)
 
+### 互动·交流
+
+- QQ交流群：群号码 80998448 [加入QQ群](https://shang.qq.com/wpa/qunwpa?idkey=e8c0258f779fa73a7d503871d2ff0f8da5698233b79f4e29836471a1d7491494)
+- GitHub: <https://github.com/wuyumin/easydoc> 欢迎 star 它
+
 ### 软件下载
 
 [从这下载软件](https://github.com/wuyumin/easydoc/releases) (压缩包需要解压出软件文件。)
@@ -13,8 +18,6 @@ EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://wuyumin.github.io/easydoc/di
 仅一个软件文件搞定，不用安装，更不用其它依赖，支持微软系统电脑，苹果系统电脑，Linux系统电脑。
 
 EasyDoc 使用 Go 语言开发，是开源软件，你可以自行使用源码进行编译。其实你可不必这么做，我们已经有编译并优化好的软件来下载。
-
-GitHub: <https://github.com/wuyumin/easydoc> 欢迎star它
 
 ### 命令行的使用
 

@@ -6,6 +6,10 @@ EasyDoc, `Easy` to generate `Documents`.
 
 EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)
 
+### Communication
+
+- GitHub: <https://github.com/wuyumin/easydoc> Welcome star it
+
 ### Software Download
 
 [link to download software](https://github.com/wuyumin/easydoc/releases) (Compressed package need to extract the software file.)
@@ -13,8 +17,6 @@ EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://wuyumin.github.io/easyd
 Only one software file, do not install, not to rely on others, support to Microsoft system computer, Apple system computer, Linux system computer.
 
 EasyDoc is developed by Go language, open source software, you can use the source code to compile. In fact, you do not have to do that, we have compiled and optimized software for download.
-
-GitHub: <https://github.com/wuyumin/easydoc> Welcome star it
 
 ### Command Line to Use
 

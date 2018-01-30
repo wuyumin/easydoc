@@ -11,3 +11,7 @@ Support Microsoft, Apple, Linux and other operating systems.
 ### EasyDoc Download
 
 <https://github.com/wuyumin/easydoc/releases>
+
+### Communication
+
+- GitHub: <https://github.com/wuyumin/easydoc> Welcome star it

@@ -11,6 +11,7 @@
 - [EasyDoc 的使用](zh-CN.html)
 - [关于 EasyDoc](zh-CN-info.html)
 - [EasyDoc 的更新日志](zh-CN-log.html)
+- QQ交流群：群号码 80998448 [加入QQ群](https://shang.qq.com/wpa/qunwpa?idkey=e8c0258f779fa73a7d503871d2ff0f8da5698233b79f4e29836471a1d7491494)
 
 English Documents
 
