@@ -6,22 +6,24 @@ EasyDoc，简单、快速生成文档的工具。
 
 EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)
 
-### 可执行文件下载
+### 软件下载
 
-[从这下载可执行文件](https://github.com/wuyumin/easydoc/releases) (压缩包需要解压出可执行文件。)
+[从这下载软件](https://github.com/wuyumin/easydoc/releases) (压缩包需要解压出软件文件。)
 
-仅一个可执行软件搞定，不用安装，更不用其它依赖，支持微软系统电脑，苹果系统电脑，Linux系统电脑。
+仅一个软件文件搞定，不用安装，更不用其它依赖，支持微软系统电脑，苹果系统电脑，Linux系统电脑。
 
-EasyDoc 使用 Go 语言开发，是开源软件，你可以自行使用源码进行编译。其实你可不必这么做，我们已经有编译并优化好的可执行文件来下载。
+EasyDoc 使用 Go 语言开发，是开源软件，你可以自行使用源码进行编译。其实你可不必这么做，我们已经有编译并优化好的软件来下载。
+
+GitHub: <https://github.com/wuyumin/easydoc> 欢迎star它
 
 ### 命令行的使用
 
-> 确保 easydoc 可执行文件有可执行权限！
+> 确保 easydoc 软件文件有可执行权限！
 
-可执行文件在当前目录下时：  
+软件文件在当前目录下时：  
 Windows系统 `$ easydoc -version`  
 类Unix系统(如Mac，Linux系统。注意前面有 ./ ) `$ ./easydoc -version`  
-你可以将 easydoc 可执行文件放在全局环境目录下(推荐此做法)，直接使用`$ easydoc -version`进行使用。  
+你可以将 easydoc 软件文件放在全局环境目录下(推荐此做法)，直接使用`$ easydoc -version`进行使用。  
 
 ##### EasyDoc 目前支持的命令：  
 
@@ -32,7 +34,7 @@ Windows系统 `$ easydoc -version`
 `-help` 帮助文档  
 `-version` 查看 EasyDoc 版本  
 
-生成的静态文件都放在`dist`目录，直接**复制该目录**到适当地方当作网站目录来使用。
+生成的静态文件都放在`dist`目录，直接使用或复制该目录当网站目录。
 
 ### 源目录基本结构
 
@@ -47,21 +49,22 @@ Windows系统 `$ easydoc -version`
 │  │  │  ├─doc.tpl  //文档模板文件(非必须，没有则使用软件默认模板)
 │  ├─index.md       //首页(非必须，但推荐)
 │  ├─SUMMARY.md     //生成菜单使用(必须)
-├─easydoc.exe           //可执行文件
+├─easydoc.exe           //软件文件(推荐放在全局环境目录下)
 ```
 - `建议将 .md 源文件仅放在 src 根目录下`，避免忘记模板修改而生成的网页链接路径不对，造成无法访问。
 - 源文件使用 Markdown 语法编写。
 
 ### 贡献
 
-帮我们改进：[提交 issue 给我们](https://github.com/wuyumin/easydoc/issues) 或者 [提交 pull request 给我们](https://github.com/wuyumin/easydoc/pulls)。
+GitHub: <https://github.com/wuyumin/easydoc> 欢迎star它  
+建议或帮我们改进：[提交 issue 给我们](https://github.com/wuyumin/easydoc/issues) 或者 [提交 pull request 给我们](https://github.com/wuyumin/easydoc/pulls)。
 
 ### 命令操作示例动图
 
 ![EasyDoc](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.gif)
 
-### 谁使用 EasyDoc
+### 谁在使用 EasyDoc
 
 欢迎你提供使用 EasyDoc 的网站，方便我们收录。
 
-- [EasyDoc 文档中心](https://wuyumin.github.io/easydoc/dist)
+- [EasyDoc 文档中心](https://wuyumin.github.io/easydoc)

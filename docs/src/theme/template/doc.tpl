@@ -25,7 +25,7 @@
     <div class="ui vertical">
         <div class="ui inverted borderless menu">
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
-            <a href="index.html" class="item">Home</a>
+            <a href="index.html" class="item">首页 Home</a>
             <div class="right menu">
                 <a  href="https://github.com/wuyumin/easydoc" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
             </div>
