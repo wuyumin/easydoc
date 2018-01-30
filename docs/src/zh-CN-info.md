@@ -8,5 +8,9 @@ EasyDoc，简单、快速生成文档的工具。
 
 <https://wuyumin.github.io/easydoc/dist>
 
+### EasyDoc 下载
+
+<https://github.com/wuyumin/easydoc/releases>
+
 ### 使用截图
 ![EasyDoc](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.gif)

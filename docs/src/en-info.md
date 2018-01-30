@@ -7,3 +7,7 @@ Support Microsoft, Apple, Linux and other operating systems.
 ### EasyDoc Website
 
 <https://wuyumin.github.io/easydoc/dist>
+
+### EasyDoc Download
+
+<https://github.com/wuyumin/easydoc/releases>
