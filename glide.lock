@@ -1,6 +1,8 @@
-hash: ec9babf13bb5fc20d04568d40da486edd5b7158160bd8da4df3ff8037f655a06
-updated: 2018-01-28T16:47:58.7470094+08:00
+hash: be184abf95fd16bb4a5804aa95f18f409ceb914494176e7cda322b5d7cac9a29
+updated: 2018-01-31T21:09:40.2442088+08:00
 imports:
+- name: github.com/BurntSushi/toml
+  version: b26d9c308763d68093482582cea63d69be07a0f0
 - name: github.com/mostafah/fsync
   version: 6c37e2827238edc544397801799b7f7cad4678d6
 - name: github.com/russross/blackfriday
