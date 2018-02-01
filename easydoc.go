@@ -148,7 +148,7 @@ blockquote{margin: 5px 0;padding: 5px 10px;border-left: 2px solid #00b5ad;backgr
     <div class="ui vertical">
         <div class="ui inverted borderless menu">
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
-            <a href="index.html" class="item">Home</a>
+            <a href="{{.fixLink}}index.html" class="item">Home</a>
             <div class="right menu">
                 <a  href="https://github.com/wuyumin/easydoc" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
             </div>
@@ -316,7 +316,7 @@ func GenerateDoc(isEmptydist bool) error {
 			if f.IsDir() || (!strings.HasSuffix(f.Name(), ".md")) {
 				return nil
 			}
-			postSourceById[sourceKey+1] = &PostSource{Id: sourceKey + 1, Title: strings.Replace(f.Name(), ".md", "", 1), AbsPath: path, UrlPath: strings.TrimLeft(strings.Replace(strings.Replace(path, absCurSrcPath, "", 1), "\\", "/", -1), "/")}
+			postSourceById[sourceKey+1] = &PostSource{Id: sourceKey + 1, Title: strings.TrimRight(f.Name(), ".md"), AbsPath: path, UrlPath: strings.TrimLeft(strings.Replace(strings.Replace(path, absCurSrcPath, "", 1), "\\", "/", -1), "/")}
 			sourceKey++
 			return nil
 		})
@@ -371,12 +371,14 @@ func GenerateDoc(isEmptydist bool) error {
 		}
 		var bufDoc bytes.Buffer
 		markdown2Html := string(blackfriday.MarkdownCommon(markdownDoc)) // Document html content
-		docTemplateName.Execute(&bufDoc, map[string]interface{}{"dataTitle": v.Title, "dataMenu": menuTemplateContent, "dataDoc": markdown2Html, "languageCode": conf.LanguageCode})
-		err = utils.ExistsOrMkdir(path.Dir(v.AbsPath))
+		docTemplateName.Execute(&bufDoc, map[string]interface{}{"dataTitle": v.Title, "dataMenu": menuTemplateContent, "dataDoc": markdown2Html, "fixLink": conf.FixLink, "languageCode": conf.LanguageCode, "suffixTitle": conf.SuffixTitle, "homeTitle": conf.HomeTitle})
+		// The target path to be generated
+		newAbsPath := fmt.Sprint(strings.TrimRight(fmt.Sprint(curDistDir, "/", v.UrlPath), ".md"), ".html")
+		err = utils.ExistsOrMkdir(path.Dir(newAbsPath))
 		if err != nil {
 			return err
 		}
-		err = ioutil.WriteFile(v.AbsPath, bufDoc.Bytes(), os.ModePerm)
+		err = ioutil.WriteFile(newAbsPath, bufDoc.Bytes(), os.ModePerm)
 		if err != nil {
 			return err
 		}
@@ -445,16 +447,22 @@ func GenerateDoc(isEmptydist bool) error {
 }
 
 func generateMenuByMap(myMap map[int]*PostSource) string {
-	menuStr := "<ul>"
+	var buf bytes.Buffer
+	buf.WriteString("<ul>")
 	for _, v := range myMap {
+		buf.WriteString("<li><a href=\"")
 		if !utils.IsExternalLink(v.UrlPath) {
-			fmt.Sprint(menuStr, "<li><a href=\"", conf.FixLink, v.UrlPath, "\">", v.Title, "</a></li>")
+			buf.WriteString(conf.FixLink)
+			buf.WriteString(fmt.Sprint(strings.TrimRight(v.UrlPath, ".md"), ".html"))
 		} else {
-			fmt.Sprint(menuStr, "<li><a href=\"", v.UrlPath, "\">", v.Title, "</a></li>")
+			buf.WriteString(v.UrlPath)
 		}
+		buf.WriteString("\">")
+		buf.WriteString(v.Title)
+		buf.WriteString("</a></li>")
 	}
-	fmt.Sprint(menuStr, "</ul>")
-	return menuStr
+	buf.WriteString("</ul>")
+	return buf.String()
 }
 
 func generateTips() error {
