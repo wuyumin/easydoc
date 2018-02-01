@@ -6,7 +6,3 @@ Thumbs.db
 
 #/vendor/
 #glide.lock
-
-#init directory
-/dist/
-/src/
