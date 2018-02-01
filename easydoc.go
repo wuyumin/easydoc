@@ -68,11 +68,12 @@ func init() {
 
 	configFileDefaultContent = `fixLink = ""
 languageCode = "zh-CN"
-theme="default"
+theme = "default"
 suffixTitle = ""
 homeTitle = ""
 # SCANFILE
 scanFile = [
+
 ]
 `
 
