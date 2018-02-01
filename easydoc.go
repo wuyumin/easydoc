@@ -381,21 +381,41 @@ func GenerateDoc(isEmptydist bool) error {
 	////////////Source processing////////////
 
 	// dist css
+	themeCssFile := fmt.Sprint(curThemeDir, "/", conf.Theme, "/css/style.css")
 	distCssFileDir := fmt.Sprint(curDistDir, "/asset/css")
+	var distCssContent []byte
+	if _, err := os.Stat(themeCssFile); err == nil {
+		distCssContent, err = ioutil.ReadFile(themeCssFile)
+		if err != nil {
+			return err
+		}
+	} else {
+		distCssContent = []byte(cssDefaultContent)
+	}
 	if err = utils.ExistsOrMkdir(distCssFileDir); err != nil {
 		return err
 	}
-	err = ioutil.WriteFile(fmt.Sprint(distCssFileDir, "/style.css"), []byte(cssDefaultContent), os.ModePerm)
+	err = ioutil.WriteFile(fmt.Sprint(distCssFileDir, "/style.css"), distCssContent, os.ModePerm)
 	if err != nil {
 		return err
 	}
 
 	// dist js
+	themeJsFile := fmt.Sprint(curThemeDir, "/", conf.Theme, "/js/app.js")
 	distJsFileDir := fmt.Sprint(curDistDir, "/asset/js")
+	var distJsContent []byte
+	if _, err := os.Stat(themeJsFile); err == nil {
+		distJsContent, err = ioutil.ReadFile(themeJsFile)
+		if err != nil {
+			return err
+		}
+	} else {
+		distJsContent = []byte(jsDefaultContent)
+	}
 	if err = utils.ExistsOrMkdir(distJsFileDir); err != nil {
 		return err
 	}
-	err = ioutil.WriteFile(fmt.Sprint(distJsFileDir, "/app.js"), []byte(jsDefaultContent), os.ModePerm)
+	err = ioutil.WriteFile(fmt.Sprint(distJsFileDir, "/app.js"), distJsContent, os.ModePerm)
 	if err != nil {
 		return err
 	}
