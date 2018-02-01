@@ -6,7 +6,7 @@ a{color: #009c95;}
 .menu a:hover{background-color: rgba(0,0,0,.05);color: rgba(0,0,0,.95);}
 .menu .made-by{padding: 0.5em;}
 .menu .made-by a{text-align: center;}
-.content{}
+.content{margin-top: 10px;}
 .ui .new-grid{margin-left: 0;margin-right: 0;}
 
 /* markdown2html style */

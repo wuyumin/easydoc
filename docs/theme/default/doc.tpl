@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="{{.languageCode}}">
 <head>
 <meta charset="utf-8">
 <title>{{.dataTitle}}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
-<!-- <link rel="stylesheet" href="static/css/style.css"> -->
-<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/static/css/style.css">
+<!-- <link rel="stylesheet" href="{{.fixLink}}asset/css/style.css"> -->
+<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/asset/css/style.css">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
     <div class="ui vertical">
         <div class="ui inverted borderless menu">
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
-            <a href="index.html" class="item">首页 Home</a>
+            <a href="{{.fixLink}}index.html" class="item">首页 | Home</a>
             <div class="right menu">
                 <a  href="https://github.com/wuyumin/easydoc" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
             </div>
@@ -49,7 +49,7 @@
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
-<!-- <script src="static/js/app.js"></script> -->
-<script src="https://wuyumin.github.io/easydoc/dist/static/js/app.js"></script>
+<!-- <script src="{{.fixLink}}asset/js/app.js"></script> -->
+<script src="https://wuyumin.github.io/easydoc/dist/asset/js/app.js"></script>
 </body>
 </html>

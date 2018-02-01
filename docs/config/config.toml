@@ -1,0 +1,15 @@
+fixLink = "/easydoc/dist/"
+languageCode = "zh-CN"
+theme = "default"
+suffixTitle = ""
+homeTitle = ""
+# SCANFILE
+scanFile = [
+    ["首页 | Home","src/index.md"],
+    ["EasyDoc 的使用","src/zh-CN/index.md"],
+    ["关于 EasyDoc","src/zh-CN/info.md"],
+    ["EasyDoc 的更新日志","src/zh-CN/log.md"],
+    ["EasyDoc Use","src/en/index.md"],
+    ["About EasyDoc","src/en/info.md"],
+    ["EasyDoc Update Log","src/en/log.md"],
+]
