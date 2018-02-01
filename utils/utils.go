@@ -29,3 +29,11 @@ func ExistsOrMkdir(dir string) error {
 func IsExternalLink(path string) bool {
 	return strings.HasPrefix(path, "https:") || strings.HasPrefix(path, "http:") || strings.HasPrefix(path, "ftp:")
 }
+
+// Ternary Operator
+func If(condition bool, trueValue, falseValue interface{}) interface{} {
+	if condition {
+		return trueValue
+	}
+	return falseValue
+}
