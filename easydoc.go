@@ -128,8 +128,8 @@ blockquote{margin: 5px 0;padding: 5px 10px;border-left: 2px solid #00b5ad;backgr
 <title>{{.dataTitle}}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
-<!-- <link rel="stylesheet" href="static/css/style.css"> -->
-<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/static/css/style.css">
+<!-- <link rel="stylesheet" href="{{.fixLink}}asset/css/style.css"> -->
+<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/asset/css/style.css">
 </head>
 <body>
 
@@ -172,8 +172,8 @@ blockquote{margin: 5px 0;padding: 5px 10px;border-left: 2px solid #00b5ad;backgr
 <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
-<!-- <script src="static/js/app.js"></script> -->
-<script src="https://wuyumin.github.io/easydoc/dist/static/js/app.js"></script>
+<!-- <script src="{{.fixLink}}asset/js/app.js"></script> -->
+<script src="https://wuyumin.github.io/easydoc/dist/asset/js/app.js"></script>
 </body>
 </html>
 `
