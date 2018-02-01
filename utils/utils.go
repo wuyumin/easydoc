@@ -3,6 +3,7 @@ package utils
 import (
 	"fmt"
 	"os"
+	"strings"
 )
 
 // Handle the error
@@ -22,4 +23,9 @@ func ExistsOrMkdir(dir string) error {
 	//make
 	err := os.MkdirAll(dir, os.ModePerm)
 	return err
+}
+
+// Is External Link
+func IsExternalLink(path string) bool {
+	return strings.HasPrefix(path, "https:") || strings.HasPrefix(path, "http:") || strings.HasPrefix(path, "ftp:")
 }
