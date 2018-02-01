@@ -365,6 +365,9 @@ func GenerateDoc(isEmptydist bool) error {
 		if err != nil {
 			return err
 		}
+		if utils.IsExternalLink(v.UrlPath) {
+			continue
+		}
 		var bufDoc bytes.Buffer
 		markdown2Html := string(blackfriday.MarkdownCommon(markdownDoc)) // Document html content
 		docTemplateName.Execute(&bufDoc, map[string]interface{}{"dataTitle": v.Title, "dataMenu": menuTemplateContent, "dataDoc": markdown2Html, "languageCode": conf.LanguageCode})
