@@ -1,9 +1,9 @@
 package main
 
 import (
+	"github.com/wuyumin/easydoc"
 	"github.com/wuyumin/easydoc/utils"
 	"github.com/wuyumin/easydoc/utils/version"
-	"github.com/wuyumin/easydoc"
 	"fmt"
 	"flag"
 )
@@ -56,16 +56,8 @@ func main() {
 		err = easydoc.GenerateDoc(false)
 		utils.CheckErr(err)
 	case *emptyDistPtr:
-		var submit string
-		fmt.Print("Be sure to empty dist directory?(y or n Press Ctrl + C to ):")
-		fmt.Scan(&submit)
-		if submit == "Y" || submit == "y" {
-			err = easydoc.EmptyDist()
-			utils.CheckErr(err)
-			fmt.Println("Empty dist is OK.")
-		} else {
-			fmt.Println("No empty dist.")
-		}
+		err = easydoc.EmptyDist()
+		utils.CheckErr(err)
 	case *ServerPtr:
 		err = easydoc.StartServer(*portPtr, *pathPtr)
 		utils.CheckErr(err)
