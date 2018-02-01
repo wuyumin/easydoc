@@ -303,7 +303,7 @@ func GenerateDoc(isEmptydist bool) error {
 				return err
 			}
 			filePathAbs, _ := filepath.Abs(v[1])
-			postSourceById[k+1] = &PostSource{Id: k + 1, Title: v[0], AbsPath: filePathAbs, UrlPath: strings.Replace(strings.Replace(filePathAbs, absCurSrcPath, "", 1), "\\", "/", -1)}
+			postSourceById[k+1] = &PostSource{Id: k + 1, Title: v[0], AbsPath: filePathAbs, UrlPath: strings.TrimLeft(strings.Replace(strings.Replace(filePathAbs, absCurSrcPath, "", 1), "\\", "/", -1), "/")}
 		}
 	} else {
 		// source from automatic scanning
@@ -315,7 +315,7 @@ func GenerateDoc(isEmptydist bool) error {
 			if f.IsDir() || (!strings.HasSuffix(f.Name(), ".md")) {
 				return nil
 			}
-			postSourceById[sourceKey+1] = &PostSource{Id: sourceKey + 1, Title: strings.Replace(f.Name(), ".md", "", 1), AbsPath: path, UrlPath: strings.Replace(strings.Replace(path, absCurSrcPath, "", 1), "\\", "/", -1)}
+			postSourceById[sourceKey+1] = &PostSource{Id: sourceKey + 1, Title: strings.Replace(f.Name(), ".md", "", 1), AbsPath: path, UrlPath: strings.TrimLeft(strings.Replace(strings.Replace(path, absCurSrcPath, "", 1), "\\", "/", -1), "/")}
 			sourceKey++
 			return nil
 		})
@@ -443,7 +443,11 @@ func GenerateDoc(isEmptydist bool) error {
 func generateMenuByMap(myMap map[int]*PostSource) string {
 	menuStr := "<ul>"
 	for _, v := range myMap {
-		fmt.Sprint(menuStr, "<li><a href=\"", conf.FixLink, v.UrlPath, "\">", v.Title, "</a></li>")
+		if !utils.IsExternalLink(v.UrlPath) {
+			fmt.Sprint(menuStr, "<li><a href=\"", conf.FixLink, v.UrlPath, "\">", v.Title, "</a></li>")
+		} else {
+			fmt.Sprint(menuStr, "<li><a href=\"", v.UrlPath, "\">", v.Title, "</a></li>")
+		}
 	}
 	fmt.Sprint(menuStr, "</ul>")
 	return menuStr
