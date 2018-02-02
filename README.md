@@ -25,7 +25,7 @@ EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://wuyumin.github.io/easyd
 
 Only one software file, do not install, not to rely on others, support to Microsoft system computer, Apple system computer, Linux system computer.
 
-Software Update: Please download the new software file overwrite the old software file.
+How to update the software: Please download the new software file overwrite the old software file.
 
 EasyDoc is developed by Go language, open source software, you can use the source code to compile. In fact, you do not have to do that, we have compiled and optimized software for download.
 
