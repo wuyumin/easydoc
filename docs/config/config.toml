@@ -1,8 +1,8 @@
 fixLink = "/easydoc/dist/"
 languageCode = "zh-CN"
 theme = "default"
-suffixTitle = ""
-homeTitle = ""
+suffixTitle = " - EasyDoc"
+homeTitle = "EasyDoc 官网 | EasyDoc Website"
 # SCANFILE
 scanFile = [
 

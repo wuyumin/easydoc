@@ -2,7 +2,7 @@
 <html lang="{{.languageCode}}">
 <head>
 <meta charset="utf-8">
-<title>{{.dataTitle}}</title>
+<title>{{if (eq .newUrlPath "index.html")}}{{.homeTitle}}{{else}}{{.dataTitle}}{{.suffixTitle}}{{end}}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
 <!-- <link rel="stylesheet" href="{{.fixLink}}asset/css/style.css"> -->

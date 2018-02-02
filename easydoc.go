@@ -70,7 +70,7 @@ func init() {
 languageCode = "zh-CN"
 theme = "default"
 suffixTitle = ""
-homeTitle = ""
+homeTitle = "Home Title"
 # SCANFILE
 scanFile = [
 
@@ -126,7 +126,7 @@ blockquote{margin: 5px 0;padding: 5px 10px;border-left: 2px solid #00b5ad;backgr
 <html lang="{{.languageCode}}">
 <head>
 <meta charset="utf-8">
-<title>{{.dataTitle}}</title>
+<title>{{if (eq .newUrlPath "index.html")}}{{.homeTitle}}{{else}}{{.dataTitle}}{{.suffixTitle}}{{end}}</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
 <!-- <link rel="stylesheet" href="{{.fixLink}}asset/css/style.css"> -->
@@ -372,9 +372,9 @@ func GenerateDoc(isEmptydist bool) error {
 		}
 		var bufDoc bytes.Buffer
 		markdown2Html := string(blackfriday.MarkdownCommon(markdownDoc)) // Document html content
-		docTemplateName.Execute(&bufDoc, map[string]interface{}{"dataTitle": v.Title, "dataMenu": menuTemplateContent, "dataDoc": markdown2Html, "fixLink": conf.FixLink, "languageCode": conf.LanguageCode, "suffixTitle": conf.SuffixTitle, "homeTitle": conf.HomeTitle})
-		// The target path to be generated
-		newAbsPath := fmt.Sprint(strings.TrimRight(fmt.Sprint(curDistDir, "/", v.UrlPath), ".md"), ".html")
+		newUrlPath := fmt.Sprint(strings.TrimRight(v.UrlPath, ".md"), ".html")
+		newAbsPath := fmt.Sprint(curDistDir, "/", newUrlPath) // The target path to be generated
+		docTemplateName.Execute(&bufDoc, map[string]interface{}{"dataTitle": v.Title, "dataMenu": menuTemplateContent, "dataDoc": markdown2Html, "fixLink": conf.FixLink, "languageCode": conf.LanguageCode, "suffixTitle": conf.SuffixTitle, "homeTitle": conf.HomeTitle, "newUrlPath": newUrlPath})
 		err = utils.ExistsOrMkdir(path.Dir(newAbsPath))
 		if err != nil {
 			return err
