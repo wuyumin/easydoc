@@ -80,6 +80,7 @@ Use `-init` command automatically generate
 - Menu generation by order: menu.tpl template content is not empty > The scanFile array for config.toml is not empty(The setting title as the link title) > Automatic scanning .md files in src directory to generation(The filename[no suffix] as the link title).
 - Document generation by order: The scanFile array for config.toml is not empty(The setting title as the document title) > Automatic scanning .md files in src directory to generation(The filename[no suffix] as the document title).
 - config.toml scanFile array fill format：
+
 ```html
 scanFile = [
 	["Link title", "base on src directory, src beginning of character, .md file path(support external link)"],
