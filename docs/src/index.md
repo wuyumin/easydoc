@@ -17,7 +17,7 @@ English Documents
 
 - [EasyDoc Use](/easydoc/dist/en/index.html)
 - [About EasyDoc](/easydoc/dist/en/info.html)
-- [EasyDoc Update Log](easydoc/dist/en/log.html)
+- [EasyDoc Update Log](/easydoc/dist/en/log.html)
 
 老版本 | Old Version
 
