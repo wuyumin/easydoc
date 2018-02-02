@@ -57,9 +57,7 @@
                 <div class="ui raised segment">
                     <strong class="ui teal ribbon label">index</strong>
                     <div class="content">
-                        <h1>EasyDoc 中文文档</h1>
-
-<p><code>新版本 v2.0.1 已发布，欢迎用户及时更新和下载使用。</code></p>
+                        <h1>EasyDoc v1 旧版本中文文档</h1>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=wuyumin&repo=easydoc&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
@@ -74,13 +72,11 @@
 <li>GitHub: <a href="https://github.com/wuyumin/easydoc">https://github.com/wuyumin/easydoc</a> 欢迎 star 它</li>
 </ul>
 
-<h3>软件更新和下载</h3>
+<h3>软件下载</h3>
 
 <p><a href="https://github.com/wuyumin/easydoc/releases">从这下载软件</a> (压缩包需要解压出软件文件。)</p>
 
 <p>仅一个软件文件搞定，不用安装，更不用其它依赖，支持微软系统电脑，苹果系统电脑，Linux系统电脑。</p>
-
-<p>软件更新：请将下载后的新软件文件覆盖旧的软件文件即可。</p>
 
 <p>EasyDoc 使用 Go 语言开发，是开源软件，你可以自行使用源码进行编译。其实你可不必这么做，我们已经有编译并优化好的软件来下载。</p>
 
@@ -93,58 +89,37 @@
 <p>软件文件在当前目录下时：<br />
 Windows系统 <code>$ easydoc -version</code><br />
 类Unix系统(如Mac，Linux系统。注意前面有 ./ ) <code>$ ./easydoc -version</code><br />
-你可以将 easydoc 软件文件放在全局环境目录下(推荐此做法)，任何地方直接使用<code>$ easydoc -version</code>进行使用。</p>
+你可以将 easydoc 软件文件放在全局环境目录下(推荐此做法)，直接使用<code>$ easydoc -version</code>进行使用。</p>
 
 <h5>EasyDoc 目前支持的命令：</h5>
 
-<blockquote>
-<p>别忘了命令前面是有小横线的！</p>
-</blockquote>
-
 <p><code>-init</code> 初始化文档结构<br />
 <code>-build</code> 生成文档<br />
-<code>-server</code> 启动 web 服务(可以配合[或不配合]端口<code>-port</code>和路径<code>-path</code>一起使用，默认端口是 80 <code>-port 80</code>，默认路径是 dist 目录<code>-path ./dist</code>)<br />
+<code>-server</code> 启动 web 服务(可以配合[或不配合]端口<code>-port</code>和路径<code>-path</code>一起使用，默认端口是 80 ，默认路径是 dist 目录)<br />
 <code>-emptydist</code> 清空 dist 目录<br />
 <code>-help</code> 帮助文档<br />
 <code>-version</code> 查看 EasyDoc 版本</p>
 
 <p>生成的静态文件都放在<code>dist</code>目录，直接使用或复制该目录当网站目录。</p>
 
-<h3>基本目录结构</h3>
+<h3>源目录基本结构</h3>
 
 <p>使用 <code>-init</code> 命令自动生成</p>
 
-<pre><code class="language-html">├── dist  //发布目录
-├── config
-│   └── config.toml  //配置文件,使用toml语法
-├── src  //写作目录: 存放 .md 源文件(必须,支持多级子目录写作)
-│   ├── index.md  //首页(非必须,但推荐)
-│   ├── NO-asset-folder.txt  //避免冲突,提示src目录慎用asset和static子目录
-│   └── NO-static-folder.txt
-├── static  //静态文件目录,此目录会完整地复制到发布目录(可以灵活使用它进行文件布局)
-└── theme  //模板目录(支持多套模板)
-    └── default  //default这套默认模板
-        ├── css
-        │   └── style.css //模板中的css文件(没有则使用软件默认)
-        ├── js
-        │   └── app.js //模板中的js文件(没有则使用软件默认)
-        ├── doc.tpl  //文档模板(没有则使用软件默认)
-        └── menu.tpl //菜单模板(菜单生成有顺序，见下面说明)
-├── easydoc.exe  //软件文件(必须，推荐放在全局环境目录下)
+<pre><code class="language-html">├─dist    //发布目录
+├─src     //存放 .md 源文件及模板文件(必须，支持存放在此目录及其子目录)
+│  ├─static  //静态文件目录，此目录会完整地复制到发布目录
+│  ├─theme
+│  │  ├─template
+│  │  │  ├─doc.tpl  //文档模板文件(非必须，没有则使用软件默认模板)
+│  ├─index.md       //首页(非必须，但推荐)
+│  ├─SUMMARY.md     //生成菜单使用(必须)
+├─easydoc.exe           //软件文件(推荐放在全局环境目录下)
 </code></pre>
 
 <ul>
-<li><code>源文件使用 Markdown 语法编写。</code>写作都是在 src 目录下，支持多级子目录写作(提示：src 目录慎用 asset 和 static 子目录)。</li>
-<li>生成网页链接路径不对，可以使用 config.toml 的 fixLink 项进行修正(绝对路径更好)。</li>
-<li>菜单生成和文档生成依据顺序：menu.tpl菜单模板内容不为空 &gt; config.toml的 scanFile 数组不为空 &gt; 自动扫描 src 目录下的 .md 文件生成。</li>
-<li>config.toml 的 scanFile 数组填写格式：
-<code>html
-scanFile = [
-[&quot;链接标题&quot;, &quot;以src目录为基准的src开头的对应.md文件路径(支持外链)&quot;],
-[&quot;首页&quot;, &quot;src/index.md&quot;],
-[&quot;XXX页&quot;, &quot;src/sub/XXX.md&quot;],
-]
-</code></li>
+<li><code>建议将 .md 源文件仅放在 src 根目录下</code>，避免忘记模板修改而生成的网页链接路径不对，造成无法访问。</li>
+<li>源文件使用 Markdown 语法编写。</li>
 </ul>
 
 <h3>贡献</h3>

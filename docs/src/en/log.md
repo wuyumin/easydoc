@@ -1,5 +1,13 @@
 # EasyDoc Update Log
 
+### Version 2.0.1
+
+- Re-architecture software
+- Customizable theme
+- Import the configuration file
+- Catalog clearer, such as writing in a directory `src`, in this directory you can freely configure the writing subdirectory
+- But, still keep the simple usage
+
 ### Version 1.2.1
 
 - Support for launching web services and its command
