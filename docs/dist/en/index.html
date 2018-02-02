@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>EasyDoc Use - EasyDoc</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no,email=no,adress=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
 <!-- <link rel="stylesheet" href="/easydoc/dist/asset/css/style.css"> -->
 <link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/static/css/style.css">
@@ -59,7 +60,7 @@
                     <div class="content">
                         <h1>EasyDoc English Document</h1>
 
-<p><code>The new version v2.0.1 has been released, users are welcome to update and download timely use.</code></p>
+<p><code>The new version v2.0.2 has been released, users are welcome to update and download timely use.</code></p>
 
 <iframe src="https://ghbtns.com/github-btn.html?user=wuyumin&repo=easydoc&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
@@ -137,15 +138,15 @@ You can put easydoc software file in the global environment directory(recommende
 <li>Generate web links wrong path, you can use config.toml the fixLink fix (absolute path is better).</li>
 <li>Menu generation by order: menu.tpl template content is not empty &gt; The scanFile array for config.toml is not empty(The setting title as the link title) &gt; Automatic scanning .md files in src directory to generation(The filename[no suffix] as the link title).</li>
 <li>Document generation by order: The scanFile array for config.toml is not empty(The setting title as the document title) &gt; Automatic scanning .md files in src directory to generation(The filename[no suffix] as the document title).</li>
-<li>config.toml scanFile array fill format：
-<code>html
-scanFile = [
-[&quot;Link title&quot;, &quot;base on src directory, src beginning of character, .md file path(support external link)&quot;],
-[&quot;Home&quot;, &quot;src/index.md&quot;],
-[&quot;XXX page&quot;, &quot;src/sub/XXX.md&quot;],
-]
-</code></li>
+<li>config.toml scanFile array fill format：</li>
 </ul>
+
+<pre><code class="language-html">scanFile = [
+	[&quot;Link title&quot;, &quot;base on src directory, src beginning of character, .md file path(support external link)&quot;],
+	[&quot;Home&quot;, &quot;src/index.md&quot;],
+	[&quot;XXX page&quot;, &quot;src/sub/XXX.md&quot;],
+]
+</code></pre>
 
 <h3>Contribution</h3>
 
