@@ -1,6 +1,6 @@
 # EasyDoc 中文文档
 
-`新版本 v2.0.1 已发布，欢迎用户及时更新和下载使用。`
+`新版本 v2.0.2 已发布，欢迎用户及时更新和下载使用。`
 
 <iframe src="https://ghbtns.com/github-btn.html?user=wuyumin&repo=easydoc&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 

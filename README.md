@@ -1,8 +1,8 @@
 # EasyDoc
 
-`The new version v2.0.1 has been released, users are welcome to update and download timely use.`
+`The new version v2.0.2 has been released, users are welcome to update and download timely use.`
 
-`新版本 v2.0.1 已发布，欢迎用户及时更新和下载使用。`
+`新版本 v2.0.2 已发布，欢迎用户及时更新和下载使用。`
 
 ### Documentation
 
