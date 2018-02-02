@@ -64,7 +64,7 @@ GitHub: <https://github.com/wuyumin/easydoc> 欢迎star它
 
 ### 命令操作示例动图
 
-![EasyDoc](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.gif)
+![EasyDoc](https://wuyumin.github.io/easydoc/dist/static/EasyDoc-v1.gif)
 
 ### 谁在使用 EasyDoc
 
