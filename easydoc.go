@@ -364,12 +364,13 @@ func GenerateDoc(isEmptydist bool) error {
 
 	// Each document content
 	for _, v := range postSourceById {
+		// Is External Link
+		if utils.IsExternalLink(v.UrlPath) {
+			continue
+		}
 		markdownDoc, err := ioutil.ReadFile(v.AbsPath)
 		if err != nil {
 			return err
-		}
-		if utils.IsExternalLink(v.UrlPath) {
-			continue
 		}
 		var bufDoc bytes.Buffer
 		markdown2Html := string(blackfriday.MarkdownCommon(markdownDoc)) // Document html content
@@ -453,6 +454,7 @@ func generateMenuByMap(myMap map[int]*PostSource) string {
 	buf.WriteString("<ul>")
 	for _, v := range myMap {
 		buf.WriteString("<li><a href=\"")
+		// Is External Link
 		if !utils.IsExternalLink(v.UrlPath) {
 			buf.WriteString(conf.FixLink)
 			buf.WriteString(fmt.Sprint(strings.TrimRight(v.UrlPath, ".md"), ".html"))
