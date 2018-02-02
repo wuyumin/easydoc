@@ -8,6 +8,7 @@ a{color: #009c95;}
 .menu .made-by a{text-align: center;}
 .content{margin-top: 10px;}
 .ui .new-grid{margin-left: 0;margin-right: 0;}
+.ui.menu{border-radius: 0 !important;}
 
 /* markdown2html style */
 .content img{max-width: 100%;height: auto;}

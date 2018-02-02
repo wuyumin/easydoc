@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>index</title>
+<title>EasyDoc 的使用 - EasyDoc</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
 <!-- <link rel="stylesheet" href="/easydoc/dist/asset/css/style.css"> -->
-<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/asset/css/style.css">
+<link rel="stylesheet" href="https://wuyumin.github.io/easydoc/dist/static/css/style.css">
 </head>
 <body>
 
@@ -55,7 +55,7 @@
         <div class="ui grid new-grid">
             <div class="sixteen wide column">
                 <div class="ui raised segment">
-                    <strong class="ui teal ribbon label">index</strong>
+                    <strong class="ui teal ribbon label">EasyDoc 的使用</strong>
                     <div class="content">
                         <h1>EasyDoc 中文文档</h1>
 
@@ -136,13 +136,14 @@ Windows系统 <code>$ easydoc -version</code><br />
 <ul>
 <li><code>源文件使用 Markdown 语法编写。</code>写作都是在 src 目录下，支持多级子目录写作(提示：src 目录慎用 asset 和 static 子目录)。</li>
 <li>生成网页链接路径不对，可以使用 config.toml 的 fixLink 项进行修正(绝对路径更好)。</li>
-<li>菜单生成和文档生成依据顺序：menu.tpl菜单模板内容不为空 &gt; config.toml的 scanFile 数组不为空 &gt; 自动扫描 src 目录下的 .md 文件生成。</li>
+<li>菜单生成依据顺序：menu.tpl菜单模板内容不为空 &gt; config.toml的 scanFile 数组不为空(链接标题为设置的标题) &gt; 自动扫描 src 目录下的 .md 文件生成(链接标题为无后缀的文件名)。</li>
+<li>文档生成依据顺序：config.toml的 scanFile 数组不为空(文档标题为设置的标题) &gt; 自动扫描 src 目录下的 .md 文件生成(文档标题为无后缀的文件名)。</li>
 <li>config.toml 的 scanFile 数组填写格式：
 <code>html
 scanFile = [
-[&quot;链接标题&quot;, &quot;以src目录为基准的src开头的对应.md文件路径(支持外链)&quot;],
-[&quot;首页&quot;, &quot;src/index.md&quot;],
-[&quot;XXX页&quot;, &quot;src/sub/XXX.md&quot;],
+	[&quot;链接标题&quot;, &quot;以src目录为基准的src开头的对应.md文件路径(支持外链)&quot;],
+	[&quot;首页&quot;, &quot;src/index.md&quot;],
+	[&quot;XXX页&quot;, &quot;src/sub/XXX.md&quot;],
 ]
 </code></li>
 </ul>
@@ -177,6 +178,6 @@ scanFile = [
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
 <script src="https://cdn.bootcss.com/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 <!-- <script src="/easydoc/dist/asset/js/app.js"></script> -->
-<script src="https://wuyumin.github.io/easydoc/dist/asset/js/app.js"></script>
+<script src="https://wuyumin.github.io/easydoc/dist/static/js/app.js"></script>
 </body>
 </html>

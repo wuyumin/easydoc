@@ -71,7 +71,8 @@ Windows系统 `$ easydoc -version`
 
 - `源文件使用 Markdown 语法编写。`写作都是在 src 目录下，支持多级子目录写作(提示：src 目录慎用 asset 和 static 子目录)。
 - 生成网页链接路径不对，可以使用 config.toml 的 fixLink 项进行修正(绝对路径更好)。
-- 菜单生成和文档生成依据顺序：menu.tpl菜单模板内容不为空 > config.toml的 scanFile 数组不为空 > 自动扫描 src 目录下的 .md 文件生成。
+- 菜单生成依据顺序：menu.tpl菜单模板内容不为空 > config.toml的 scanFile 数组不为空(链接标题为设置的标题) > 自动扫描 src 目录下的 .md 文件生成(链接标题为无后缀的文件名)。
+- 文档生成依据顺序：config.toml的 scanFile 数组不为空(文档标题为设置的标题) > 自动扫描 src 目录下的 .md 文件生成(文档标题为无后缀的文件名)。
 - config.toml 的 scanFile 数组填写格式：
 ```html
 scanFile = [

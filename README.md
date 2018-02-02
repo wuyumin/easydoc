@@ -77,7 +77,8 @@ Use `-init` command automatically generate
 
 - `Source files written using Markdown syntax. `Writing is in the src directory, multi-level subdirectory support (hint: src directory caution asset and static subdirectories).
 - Generate web links wrong path, you can use config.toml the fixLink fix (absolute path is better).
-- The menu generation and document generation are based on the order：menu.tpl menu template content is not empty > The scanFile array for config.toml is not empty > Automatic scanning .md files in src directory to generation.
+- Menu generation by order: menu.tpl template content is not empty > The scanFile array for config.toml is not empty(The setting title as the link title) > Automatic scanning .md files in src directory to generation(The filename[no suffix] as the link title).
+- Document generation by order: The scanFile array for config.toml is not empty(The setting title as the document title) > Automatic scanning .md files in src directory to generation(The filename[no suffix] as the document title).
 - config.toml scanFile array fill format：
 ```html
 scanFile = [
