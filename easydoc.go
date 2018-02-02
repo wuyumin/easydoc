@@ -71,9 +71,9 @@ languageCode = "zh-CN"
 theme = "default"
 suffixTitle = ""
 homeTitle = "Home Title"
-# SCANFILE
+# SCANFILE: The local path begins with src(base on src directory). support external link.
 scanFile = [
-
+    ["Home", "src/index.md"],
 ]
 `
 
