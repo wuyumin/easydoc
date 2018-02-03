@@ -445,11 +445,9 @@ func GenerateDoc(isEmptydist bool) error {
 	}
 
 	// Tips
-	if err = generateTips(); err != nil {
-		return err
-	}
+	return generateTips()
 
-	return nil
+	// return nil
 }
 
 func generateMenuByMap(myMap map[int]*PostSource) string {
