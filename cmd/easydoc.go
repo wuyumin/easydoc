@@ -1,11 +1,11 @@
 package main
 
 import (
+	"flag"
+	"fmt"
 	"github.com/wuyumin/easydoc"
 	"github.com/wuyumin/easydoc/utils"
 	"github.com/wuyumin/easydoc/utils/version"
-	"fmt"
-	"flag"
 )
 
 var (

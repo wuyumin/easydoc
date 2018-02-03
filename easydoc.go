@@ -1,20 +1,20 @@
 package easydoc
 
 import (
-	"github.com/wuyumin/easydoc/utils"
-	"github.com/mostafah/fsync"
-	"github.com/BurntSushi/toml"
-	"github.com/russross/blackfriday"
-	"os"
-	"fmt"
-	"io/ioutil"
-	"path/filepath"
-	"net/http"
-	"strings"
-	"text/template"
 	"bytes"
 	"errors"
+	"fmt"
+	"github.com/BurntSushi/toml"
+	"github.com/mostafah/fsync"
+	"github.com/russross/blackfriday"
+	"github.com/wuyumin/easydoc/utils"
+	"io/ioutil"
+	"net/http"
+	"os"
 	"path"
+	"path/filepath"
+	"strings"
+	"text/template"
 )
 
 type Config struct {
