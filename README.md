@@ -6,8 +6,8 @@
 
 ### Documentation
 
-- [中文文档](https://wuyumin.github.io/easydoc/dist/zh-CN.html)
-- [English Document](https://wuyumin.github.io/easydoc/dist/en.html)
+- [中文文档](https://wuyumin.github.io/easydoc/dist/zh-CN)
+- [English Document](https://wuyumin.github.io/easydoc/dist/en)
 
 ### What is EasyDoc?
 
