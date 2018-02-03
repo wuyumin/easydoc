@@ -17,6 +17,7 @@ import (
 	"text/template"
 )
 
+// Config defines config struct.
 type Config struct {
 	FixLink      string
 	LanguageCode string
@@ -194,6 +195,7 @@ blockquote{margin: 5px 0;padding: 5px 10px;border-left: 2px solid #00b5ad;backgr
 	}
 }
 
+// GenerateInit is to init project.
 func GenerateInit() error {
 	indexFileDefaultContent := `# Home
 
@@ -274,6 +276,7 @@ You can use markdown to write, EasyDoc will be converted to html content.
 	return nil
 }
 
+// GenerateDoc is to generate documents.
 func GenerateDoc(isEmptydist bool) error {
 	// src exist?
 	if _, err := os.Stat(curSrcDir); err != nil {
@@ -481,6 +484,7 @@ func generateTips() error {
 	return nil
 }
 
+// StartServer is to start web server.
 func StartServer(port string, path string) error {
 	output := ""
 
@@ -510,6 +514,7 @@ func StartServer(port string, path string) error {
 	return status
 }
 
+// EmptyDist is to empty the dist directory.
 func EmptyDist() error {
 	if _, err := os.Stat(curDistDir); err != nil {
 		return err

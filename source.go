@@ -1,5 +1,6 @@
 package easydoc
 
+// PostSource defines post source struct.
 type PostSource struct {
 	Id      int
 	Title   string

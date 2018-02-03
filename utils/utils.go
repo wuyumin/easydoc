@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// Handle the error
+// CheckErr handle the error
 func CheckErr(err error) {
 	if err != nil {
 		fmt.Println(err)
@@ -14,7 +14,7 @@ func CheckErr(err error) {
 	}
 }
 
-// Is directory exist? Or make.
+// ExistsOrMkdir is to determine the existence of the folder, Or make.
 func ExistsOrMkdir(dir string) error {
 	//exist?
 	if _, err := os.Stat(dir); err == nil {
@@ -25,12 +25,12 @@ func ExistsOrMkdir(dir string) error {
 	return err
 }
 
-// Is External Link
+// IsExternalLink is to determine external link.
 func IsExternalLink(path string) bool {
 	return strings.HasPrefix(path, "https:") || strings.HasPrefix(path, "http:") || strings.HasPrefix(path, "ftp:")
 }
 
-// Ternary Operator
+// If is ternary operator.
 func If(condition bool, trueValue, falseValue interface{}) interface{} {
 	if condition {
 		return trueValue
