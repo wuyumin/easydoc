@@ -4,6 +4,9 @@
 
 `新版本 v2.0.2 已发布，欢迎用户及时更新和下载使用。`
 
+[![GoDoc](https://godoc.org/github.com/wuyumin/easydoc?status.svg)](https://godoc.org/github.com/wuyumin/easydoc)
+[![Go Report Card](https://goreportcard.com/badge/github.com/wuyumin/easydoc)](https://goreportcard.com/report/github.com/wuyumin/easydoc)
+
 ### Documentation
 
 - [中文文档](https://wuyumin.github.io/easydoc/dist/zh-CN)
