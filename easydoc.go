@@ -277,7 +277,7 @@ You can use markdown to write, EasyDoc will be converted to html content.
 }
 
 // GenerateDoc is to generate documents.
-func GenerateDoc(isEmptydist bool) error {
+func GenerateDoc(isEmptyDist bool) error {
 	// src exist?
 	if _, err := os.Stat(curSrcDir); err != nil {
 		return err
@@ -288,7 +288,7 @@ func GenerateDoc(isEmptydist bool) error {
 	}
 
 	// Empty dist directory
-	if isEmptydist {
+	if isEmptyDist {
 		err := EmptyDist()
 		return err
 	}
