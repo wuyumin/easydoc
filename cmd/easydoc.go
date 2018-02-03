@@ -14,7 +14,7 @@ var (
 	initPtr      *bool
 	buildPtr     *bool
 	emptyDistPtr *bool
-	ServerPtr    *bool
+	serverPtr    *bool
 	portPtr      *string
 	pathPtr      *string
 )
@@ -25,7 +25,7 @@ func init() {
 	initPtr = flag.Bool("init", false, "Init the document structure")
 	buildPtr = flag.Bool("build", false, "Build the document")
 	emptyDistPtr = flag.Bool("emptydist", false, "Empty dist directory")
-	ServerPtr = flag.Bool("server", false, "Start web server")
+	serverPtr = flag.Bool("server", false, "Start web server")
 	portPtr = flag.String("port", "", "Web port")
 	pathPtr = flag.String("path", "", "Web path")
 	flag.Parse()
@@ -58,7 +58,7 @@ func main() {
 	case *emptyDistPtr:
 		err = easydoc.EmptyDist()
 		utils.CheckErr(err)
-	case *ServerPtr:
+	case *serverPtr:
 		err = easydoc.StartServer(*portPtr, *pathPtr)
 		utils.CheckErr(err)
 	default:
