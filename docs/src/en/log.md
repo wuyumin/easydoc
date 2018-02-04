@@ -1,6 +1,13 @@
 # EasyDoc Update Log
 
-[Download](https://github.com/wuyumin/easydoc/releases)
+[Download EasyDoc](https://github.com/wuyumin/easydoc/releases)
+
+### Version 2.0.3
+
+release date: 2018-2-04
+
+- The official website domain is adjusted to `easydoc.089858.com`
+- Bug fixes and detail adjustments
 
 ### Version 2.0.2
 
