@@ -1,7 +1,5 @@
 # EasyDoc English Document
 
-`The new version v2.0.2 has been released, users are welcome to update and download timely use.`
-
 <iframe src="https://ghbtns.com/github-btn.html?user=wuyumin&repo=easydoc&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
 
 EasyDoc, `Easy` to generate `Documents`.
@@ -10,6 +8,7 @@ EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://easydoc.089858.com/stat
 
 ### Communication
 
+- Gitter: <https://gitter.im/wuyumin/easydoc>
 - GitHub: <https://github.com/wuyumin/easydoc> Welcome star it
 
 ### Software Updates and Downloads

@@ -17,7 +17,7 @@
 
         <div></div>
         <ul class="made-by">
-            <li><a href="https://easydoc.089858.com" target="_blank" title="EasyDoc">EasyDoc</a></li>
+            <li><a href="https://easydoc.089858.com" title="EasyDoc">EasyDoc</a></li>
         </ul>
     </div>
 </div>
@@ -28,7 +28,7 @@
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
             <a href="{{.fixLink}}index.html" class="item">首页 | Home</a>
             <div class="right menu">
-                <a  href="https://easydoc.089858.com" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
+                <a  href="https://easydoc.089858.com" class="item" title="EasyDoc">EasyDoc</a>
             </div>
         </div>
 

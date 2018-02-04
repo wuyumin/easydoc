@@ -3,8 +3,12 @@
 简单、快速生成文档。  
 `Easy` to generate `Documents`.  
 
+`新版本 v2.0.2 已发布，欢迎用户及时更新和下载使用。`  
+`The new version v2.0.2 has been released, users are welcome to update and download timely use.`  
+
 - [首页 | Home](/index.html)
 - [下载 | Download](https://github.com/wuyumin/easydoc/releases)
+- [GitHub](https://github.com/wuyumin/easydoc)
 
 中文文档
 

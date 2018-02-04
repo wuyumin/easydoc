@@ -4,6 +4,7 @@
 <ul>
     <li><a href="/index.html">首页 | Home</a></li>
     <li><a href="https://github.com/wuyumin/easydoc/releases">下载 | Download</a></li>
+    <li><a href="https://github.com/wuyumin/easydoc">GitHub</a></li>
 </ul>
 
 <p>中文文档</p>
