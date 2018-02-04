@@ -1,4 +1,4 @@
-fixLink = "/easydoc/dist/"
+fixLink = "/"
 languageCode = "zh-CN"
 theme = "default"
 suffixTitle = " - EasyDoc"

@@ -1,5 +1,7 @@
 # EasyDoc 的更新日志
 
+[下载](https://github.com/wuyumin/easydoc/releases)
+
 ### 版本 2.0.2
 
 发布时间：2018-2-03

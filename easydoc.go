@@ -142,7 +142,7 @@ blockquote{margin: 5px 0;padding: 5px 10px;border-left: 2px solid #00b5ad;backgr
 
         <div></div>
         <ul class="made-by">
-            <li><a href="https://github.com/wuyumin/easydoc" target="_blank" title="EasyDoc">EasyDoc</a></li>
+            <li><a href="https://easydoc.089858.com" target="_blank" title="EasyDoc">EasyDoc</a></li>
         </ul>
     </div>
 </div>
@@ -153,7 +153,7 @@ blockquote{margin: 5px 0;padding: 5px 10px;border-left: 2px solid #00b5ad;backgr
             <a href="javascript:;" class="item" id="btn-sidebar"><i class="sidebar icon"></i></a>
             <a href="{{.fixLink}}index.html" class="item">Home</a>
             <div class="right menu">
-                <a  href="https://github.com/wuyumin/easydoc" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
+                <a  href="https://easydoc.089858.com" class="item" target="_blank" title="EasyDoc">EasyDoc</a>
             </div>
         </div>
 

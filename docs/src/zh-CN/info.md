@@ -6,7 +6,7 @@ EasyDoc，简单、快速生成文档的工具。
 
 ### EasyDoc 官网
 
-<https://wuyumin.github.io/easydoc>
+<https://easydoc.089858.com>
 
 ### EasyDoc 下载
 
@@ -18,4 +18,4 @@ EasyDoc，简单、快速生成文档的工具。
 - GitHub: <https://github.com/wuyumin/easydoc> 欢迎 star 它
 
 ### 使用截图
-![EasyDoc](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.gif)
+![EasyDoc](https://easydoc.089858.com/static/EasyDoc.gif)

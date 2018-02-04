@@ -10,14 +10,14 @@
 
 ### Documentation
 
-- [中文文档](https://wuyumin.github.io/easydoc/dist/zh-CN)
-- [English Document](https://wuyumin.github.io/easydoc/dist/en)
+- [中文文档](https://easydoc.089858.com/zh-CN)
+- [English Document](https://easydoc.089858.com/en)
 
 ### What is EasyDoc?
 
 EasyDoc, `Easy` to generate `Documents`.
 
-EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)
+EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://easydoc.089858.com/static/EasyDoc.mp3)
 
 ### Communication
 
@@ -102,4 +102,4 @@ Suggest or help us to improve: [submit an issue to us](https://github.com/wuyumi
 
 Welcome to provide "Who Use EasyDoc".
 
-- [EasyDoc Document Website](https://wuyumin.github.io/easydoc)
+- [EasyDoc Document Website](https://easydoc.089858.com)

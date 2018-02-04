@@ -4,7 +4,7 @@
 
 EasyDoc，简单、快速生成文档的工具。
 
-EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://wuyumin.github.io/easydoc/dist/static/EasyDoc.mp3)
+EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://easydoc.089858.com/static/EasyDoc.mp3)
 
 ### 互动·交流
 
@@ -64,10 +64,10 @@ GitHub: <https://github.com/wuyumin/easydoc> 欢迎star它
 
 ### 命令操作示例动图
 
-![EasyDoc](https://wuyumin.github.io/easydoc/dist/static/EasyDoc-v1.gif)
+![EasyDoc](https://easydoc.089858.com/static/EasyDoc-v1.gif)
 
 ### 谁在使用 EasyDoc
 
 欢迎你提供使用 EasyDoc 的网站，方便我们收录。
 
-- [EasyDoc 文档中心](https://wuyumin.github.io/easydoc)
+- [EasyDoc 文档中心](https://easydoc.089858.com)

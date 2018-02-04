@@ -1,5 +1,7 @@
 # EasyDoc Update Log
 
+[Download](https://github.com/wuyumin/easydoc/releases)
+
 ### Version 2.0.2
 
 release date: 2018-2-03
