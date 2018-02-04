@@ -4,6 +4,7 @@
 
 `The new version v2.0.3 has been released, users are welcome to update and download timely use.`
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/wuyumin/easydoc/blob/master/LICENSE)
 [![GoDoc](https://godoc.org/github.com/wuyumin/easydoc?status.svg)](https://godoc.org/github.com/wuyumin/easydoc)
 [![Go Report Card](https://goreportcard.com/badge/github.com/wuyumin/easydoc)](https://goreportcard.com/report/github.com/wuyumin/easydoc)
 [![Build Status](https://travis-ci.org/wuyumin/easydoc.svg?branch=master)](https://travis-ci.org/wuyumin/easydoc)
