@@ -1,5 +1,7 @@
 # EasyDoc
 
+[![Join the chat at https://gitter.im/wuyumin/easydoc](https://badges.gitter.im/wuyumin/easydoc.svg)](https://gitter.im/wuyumin/easydoc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 `The new version v2.0.2 has been released, users are welcome to update and download timely use.`
 
 `新版本 v2.0.2 已发布，欢迎用户及时更新和下载使用。`
