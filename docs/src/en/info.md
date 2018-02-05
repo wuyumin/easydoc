@@ -10,7 +10,7 @@ Support Microsoft, Apple, Linux and other operating systems.
 
 ### EasyDoc Download
 
-<https://github.com/wuyumin/easydoc/releases>
+<https://easydoc.089858.com/download>
 
 ### Communication
 

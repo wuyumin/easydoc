@@ -13,7 +13,7 @@ EasyDoc 读音 [ˈiziˈdɑk] [语音文件](https://easydoc.089858.com/static/Ea
 
 ### 软件下载
 
-[从这下载软件](https://github.com/wuyumin/easydoc/releases) (压缩包需要解压出软件文件。)
+[从这下载软件](https://easydoc.089858.com/download) (压缩包需要解压出软件文件。)
 
 仅一个软件文件搞定，不用安装，更不用其它依赖，支持微软系统电脑，苹果系统电脑，Linux系统电脑。
 

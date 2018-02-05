@@ -1,6 +1,6 @@
 # EasyDoc Update Log
 
-[Download EasyDoc](https://github.com/wuyumin/easydoc/releases)
+[Download EasyDoc](https://easydoc.089858.com/download)
 
 ### Version 2.0.3
 

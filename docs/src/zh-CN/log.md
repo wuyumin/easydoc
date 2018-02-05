@@ -1,6 +1,6 @@
 # EasyDoc 的更新日志
 
-[下载 EasyDoc](https://github.com/wuyumin/easydoc/releases)
+[下载 EasyDoc](https://easydoc.089858.com/download)
 
 ### 版本 2.0.3
 

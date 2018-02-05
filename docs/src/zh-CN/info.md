@@ -10,7 +10,7 @@ EasyDoc，简单、快速生成文档的工具。
 
 ### EasyDoc 下载
 
-<https://github.com/wuyumin/easydoc/releases>
+<https://easydoc.089858.com/download>
 
 ### 互动·交流
 

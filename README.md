@@ -11,7 +11,7 @@
 
 ### Documentation
 
-- [中文文档](https://easydoc.089858.com/zh-CN)
+- [中文文档](https://easydoc.089858.com/zh-cn)
 - [English Document](https://easydoc.089858.com/en)
 
 ### What is EasyDoc?
@@ -27,7 +27,7 @@ EasyDoc pronunciation [ˈiziˈdɑk] [sound file](https://easydoc.089858.com/stat
 
 ### Software Updates and Downloads
 
-[link to download software](https://github.com/wuyumin/easydoc/releases) (Compressed package need to extract the software file.)
+[link to download software](https://easydoc.089858.com/download) (Compressed package need to extract the software file.)
 
 Only one software file, do not install, not to rely on others, support to Microsoft system computer, Apple system computer, Linux system computer.
 
