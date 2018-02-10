@@ -16,7 +16,7 @@ set GOEXE=.exe
 mkdir %execName%-%version%-%GOOS%-%GOARCH%
 go build -ldflags="-s -w" -o %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE% %goName%
 upx %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE%
-rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
+::rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
 @echo.
 
 @echo Compile windows 64 bit...
@@ -26,7 +26,7 @@ set GOEXE=.exe
 mkdir %execName%-%version%-%GOOS%-%GOARCH%
 go build -ldflags="-s -w" -o %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE% %goName%
 upx %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE%
-rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
+::rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
 @echo.
 
 @echo Compile Linux 32 bit...
@@ -36,7 +36,7 @@ set GOEXE=
 mkdir %execName%-%version%-%GOOS%-%GOARCH%
 go build -ldflags="-s -w" -o %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE% %goName%
 upx %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE%
-rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
+::rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
 @echo.
 
 @echo Compile Linux 64 bit...
@@ -46,7 +46,7 @@ set GOEXE=
 mkdir %execName%-%version%-%GOOS%-%GOARCH%
 go build -ldflags="-s -w" -o %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE% %goName%
 upx %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE%
-rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
+::rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
 @echo.
 
 @echo Compile Mac 32 bit...
@@ -56,7 +56,7 @@ set GOEXE=
 mkdir %execName%-%version%-%GOOS%-%GOARCH%
 go build -ldflags="-s -w" -o %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE% %goName%
 upx %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE%
-rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
+::rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
 @echo.
 
 @echo Compile Mac 64 bit...
@@ -66,5 +66,5 @@ set GOEXE=
 mkdir %execName%-%version%-%GOOS%-%GOARCH%
 go build -ldflags="-s -w" -o %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE% %goName%
 upx %execName%-%version%-%GOOS%-%GOARCH%\%execName%%GOEXE%
-rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
+::rar a %execName%-%version%-%GOOS%-%GOARCH%.zip -r %execName%-%version%-%GOOS%-%GOARCH%
 @echo.
