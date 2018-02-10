@@ -4,7 +4,7 @@ title Compile EasyDoc
 
 set goName=easydoc.go
 set execName=easydoc
-set version=2.0.3
+set version=2.0.5
 
 ::Cross compile is not support CGO
 set CGO_ENABLED=0
