@@ -2,6 +2,13 @@
 
 [Download EasyDoc](https://easydoc.089858.com/download)
 
+### Version 2.0.5
+
+release date: 2018-2-10
+
+- Update default template
+- Bug fixes and detail adjustments
+
 ### Version 2.0.3
 
 release date: 2018-2-04
