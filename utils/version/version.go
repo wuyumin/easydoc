@@ -2,5 +2,5 @@ package version
 
 var (
 	// Version defines software version.
-	Version = "2.0.5"
+	Version = "2.0.6"
 )
