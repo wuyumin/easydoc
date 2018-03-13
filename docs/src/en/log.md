@@ -2,6 +2,12 @@
 
 [Download EasyDoc](https://easydoc.089858.com/download)
 
+### Version 2.0.6
+
+release date: 2018-3-13
+
+- Compiler optimization
+
 ### Version 2.0.5
 
 release date: 2018-2-10
