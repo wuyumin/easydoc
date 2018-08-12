@@ -3,5 +3,6 @@ Thumbs.db
 *.swp
 
 /.idea/
+/.vscode/
 
 #/vendor/
