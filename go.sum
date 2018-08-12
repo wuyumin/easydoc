@@ -1,6 +1,0 @@
-github.com/BurntSushi/toml v0.3.0 h1:e1/Ivsx3Z0FVTV0NSOv/aVgbUWyQuzj7DDnFblkRvsY=
-github.com/BurntSushi/toml v0.3.0/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/mostafah/fsync v0.0.0-20151120150823-6c37e2827238 h1:qWlLu2OjIh5qiMF/tckh836fV9tPvcft42yaLHSXQis=
-github.com/mostafah/fsync v0.0.0-20151120150823-6c37e2827238/go.mod h1:LF6XxAxs+QBLcokpfz8UsWIMTJYna+tYx0cjUPXYX8k=
-github.com/russross/blackfriday v1.5.1 h1:B8ZN6pD4PVofmlDCDUdELeYrbsVIDM/bpjW3v3zgcRc=
-github.com/russross/blackfriday v1.5.1/go.mod h1:JO/DiYxRf+HjHt06OyowR9PTA263kcR/rfWxYHBV53g=
